@@ -1,0 +1,331 @@
+
+.Vortryaboss-container {
+
+    width: 100%;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+/*=========================================================
+
+                    CRYSTALLIS
+
+=========================================================*/
+
+.Crystallis {
+
+    background: #2da8f0;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.Crystallis:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
+}
+
+.Crystallis h2 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+}
+
+.Crystallis p {
+
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    color: #dbeafe;
+
+}
+
+.Crystallis-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+.Crystallis-card {
+
+    background: #0f172a;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #38bdf8;
+
+}
+
+.Crystallis-card h3 {
+
+    margin: 0 0 8px 0;
+
+    color: #60a5fa;
+
+    font-size: 16px;
+
+}
+
+.Crystallis-card p {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+/*=========================================================
+
+                    UMBRAVORE
+
+=========================================================*/
+
+.Umbravore-card {
+
+    background: #0f172a;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #7c3aed;
+
+}
+
+.Umbravore-card h3 {
+
+    margin: 0 0 8px 0;
+
+    color: #c084fc;
+
+    font-size: 16px;
+
+}
+
+.Umbravore-card p {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+.Umbravore-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+.Umbravore {
+
+    background: #2d1146;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.Umbravore:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
+}
+
+/*=========================================================
+
+                    VOLTAREX
+
+=========================================================*/
+
+.Voltarex {
+
+    background: #c79a00;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+    cursor: pointer;
+
+
+}
+
+.Voltarex-card {
+
+    background: #665300;
+
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #facc15;
+
+}
+
+.Voltarex-card h3 {
+
+    margin: 0 0 8px 0;
+
+    color: #fde047;
+
+    font-size: 16px;
+
+}
+
+.Voltarex-card p {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+.Voltarex-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+.Voltarex:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
+}
+
+/*=========================================================
+
+                    TITANUS PRIME
+
+=========================================================*/
+
+.TitanusPrime {
+
+    background: #4b5563;
+    ;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.TitanusPrime-card {
+
+    background: #1f2937;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #9ca3af;
+
+}
+
+.TitanusPrime-card h3 {
+
+    margin: 0 0 8px 0;
+
+    color: #d1d5db;
+
+    font-size: 16px;
+
+}
+
+.TitanusPrime-card p {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+.TitanusPrime-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+.TitanusPrime:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
+}

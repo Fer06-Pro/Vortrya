@@ -1,0 +1,99 @@
+.ranking-container {
+
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.ranking-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.ranking-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
+}
+
+.ranking-card h2 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+}
+
+.ranking-card p {
+
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    color: #555;
+
+}
+
+.Vortrya {
+
+    border-left: 8px solid gold;
+
+}
+
+.titan {
+
+    border-left: 8px solid #8b5cf6;
+
+}
+
+.soberano {
+
+    border-left: 8px solid #2563eb;
+
+}
+
+.vanguarda {
+
+    border-left: 8px solid #10b981;
+
+}
+
+.iniciante {
+
+    border-left: 8px solid gray;
+
+}
+
+.ranking-container {
+
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
