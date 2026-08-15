@@ -2,49 +2,28 @@
 // ANIMAÇÃO DOS CARDS AO APARECER
 // ===============================
 
-const elementos = document.querySelectorAll(
-    ".card, .Crystallis, .Umbravore, .Voltarex, .TitanusPrime"
-);
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("mostrar");
-        }
-
-    });
-
-}, {
-
-    threshold: 0.15
-
-});
-
-elementos.forEach(el => observer.observe(el));
 
 
-// ===============================
-// BOTÃO VOLTAR AO TOPO
-// ===============================
+// // ===============================
+// // BOTÃO VOLTAR AO TOPO
+// // ===============================
 
-const voltar = document.getElementById("voltar");
+// const voltar = document.getElementById("voltar");
 
-if (voltar) {
+// if (voltar) {
 
-    voltar.onclick = () => {
+//     voltar.onclick = () => {
 
-        window.scrollTo({
+//         window.scrollTo({
 
-            top: 0,
-            behavior: "smooth"
+//             top: 0,
+//             behavior: "smooth"
 
-        });
+//         });
 
-    };
+//     };
 
-}
+// }
 
 
 // ===============================
@@ -112,6 +91,167 @@ document.querySelectorAll(".dropdown > a").forEach(item => {
 
             this.parentElement.classList.toggle("active");
 
+        }
+
+    });
+
+});
+
+const tabs = document.querySelectorAll(".boss-tabs button");
+const panels = document.querySelectorAll(".tab-panel");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        const target = tab.dataset.tab;
+
+        // Remove a aba ativa
+        tabs.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        // Ativa a aba clicada
+        tab.classList.add("active");
+
+        // Esconde todos os conteúdos
+        panels.forEach(panel => {
+            panel.classList.remove("active");
+        });
+
+        // Mostra o conteúdo correspondente
+        document
+            .getElementById(target)
+            .classList.add("active");
+
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tabs = document.querySelectorAll(".boss-tabs button");
+    const panels = document.querySelectorAll(".tab-panel");
+
+    tabs.forEach(tab => {
+
+        tab.addEventListener("click", () => {
+
+            const target = tab.dataset.tab;
+
+            // Remove o active de todos os botões
+            tabs.forEach(button => {
+                button.classList.remove("active");
+            });
+
+            // Remove o active de todos os conteúdos
+            panels.forEach(panel => {
+                panel.classList.remove("active");
+            });
+
+            // Ativa o botão clicado
+            tab.classList.add("active");
+
+            // Ativa o conteúdo correspondente
+            const targetPanel = document.getElementById(target);
+
+            if (targetPanel) {
+                targetPanel.classList.add("active");
+            }
+
+        });
+
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+    const menuItems = document.querySelectorAll(".nav-menu > li");
+
+    menuItems.forEach(item => {
+
+        const links = item.querySelectorAll("a");
+
+        links.forEach(link => {
+
+            const href = link.getAttribute("href");
+
+            if (!href || href === "#") {
+                return;
+            }
+
+            const linkPage = href
+                .split("/")
+                .pop()
+                .toLowerCase();
+
+            if (linkPage === currentPage) {
+
+                // Ativa o próprio link
+                link.classList.add("active");
+
+                // Se estiver dentro de dropdown,
+                // ativa também o menu principal
+                const dropdown = link.closest(".dropdown");
+
+                if (dropdown) {
+
+                    const parentLink = dropdown.querySelector(":scope > a");
+
+                    if (parentLink) {
+                        parentLink.classList.add("active");
+                    }
+
+                }
+
+            }
+
+        });
+
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+    const links = document.querySelectorAll(".nav-menu a");
+
+    links.forEach(link => {
+
+        const href = link
+            .getAttribute("href")
+            ?.split("/")
+            .pop()
+            .toLowerCase();
+
+        if (!href || href === "#") return;
+
+        if (href === currentPage) {
+
+            const li = link.closest("li");
+
+            if (li) {
+                li.classList.add("active");
+
+                const parentDropdown =
+                    li.closest(".dropdown");
+
+                if (parentDropdown) {
+                    parentDropdown.classList.add("active");
+                }
+            }
         }
 
     });

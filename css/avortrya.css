@@ -1,14 +1,47 @@
+/* ===== RESET & VARIÁVEIS GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
 /* ===== Vortrya HTML ===== */
 
 body {
+
     margin: 0;
-    width: 100%;
-    color: #1f2937;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--dark-bg);
+    min-height: 100vh;
+
+    background: var(--dark-bg);
     color: var(--text-light);
-    overflow-x: hidden;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+
+    overflow-x: hidden;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
 }
 
 .titulo {
@@ -63,6 +96,10 @@ h2 {
     border-bottom: 2px solid #60a5fa;
 
     padding-bottom: 8px;
+
+    display: flex;
+
+    justify-content: center;
 }
 
 h3 {
@@ -115,25 +152,58 @@ main p {
     margin-bottom: 20px;
 }
 
-
-/* ===== RESET & VARIÁVEIS GLOBAIS ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
+
+    /* ===== CORES PRINCIPAIS ===== */
+
     --primary-color: #00d9ff;
     --secondary-color: #ff006e;
+    --accent-color: #ffd700;
+
+    /* ===== BACKGROUNDS ===== */
+
     --dark-bg: #0a0e27;
+    --dark-secondary: #121933;
     --card-bg: #1a1f3a;
-    --text-light: #e0e0e0;
-    --text-dark: #ffffff;
-    --accent: #ffd700;
+    --card-hover: #252b4d;
+
+    /* ===== TEXTO ===== */
+
+    --text-light: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+
+    /* ===== BORDAS ===== */
+
+    --border: rgba(255, 255, 255, .08);
+    --border-hover: rgba(255, 255, 255, .18);
+
+    /* ===== SOMBRAS ===== */
+
+    --shadow-small: 0 4px 10px rgba(0, 0, 0, .20);
+    --shadow-medium: 0 10px 25px rgba(0, 0, 0, .30);
+    --shadow-large: 0 18px 45px rgba(0, 0, 0, .45);
+
+    /* ===== GRADIENTES ===== */
+
     --gradient-1: linear-gradient(135deg, #00d9ff, #0099cc);
     --gradient-2: linear-gradient(135deg, #ff006e, #ff4081);
     --gradient-3: linear-gradient(135deg, #ffd700, #ffaa00);
+
+    /* ===== TAMANHOS ===== */
+
+    --container-width: 1600px;
+
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 22px;
+
+    /* ===== TRANSIÇÕES ===== */
+
+    --transition-fast: .2s ease;
+    --transition: .3s ease;
+    --transition-slow: .5s ease;
+
 }
 
 .btn {
@@ -177,10 +247,15 @@ main p {
 }
 
 .container {
-    width: 100%;
-    max-width: 1600px;
-    /* ou 1600px */
-    margin: 0 auto;
-    padding: 0 2rem;
-    box-sizing: border-box;
+
+    width: min(100%, var(--container));
+
+    margin: auto;
+
+    padding: 0 40px;
+
+}
+
+.logo {
+    font-family: "Cinzel", serif;
 }
