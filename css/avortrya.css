@@ -1,261 +1,303 @@
 /* ===== RESET & VARIÁVEIS GLOBAIS ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
 /* ===== Vortrya HTML ===== */
 
 body {
+  margin: 0;
+  min-height: 100vh;
 
-    margin: 0;
-    min-height: 100vh;
+  background: var(--dark-bg);
+  color: var(--text-light);
 
-    background: var(--dark-bg);
-    color: var(--text-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-
-    overflow-x: hidden;
-
+  overflow-x: hidden;
 }
 
 a {
+  color: inherit;
 
-    color: inherit;
-
-    text-decoration: none;
-
+  text-decoration: none;
 }
 
 img {
+  display: block;
 
-    display: block;
-
-    max-width: 100%;
-
+  max-width: 100%;
 }
 
 .titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #6ee2eb;
-    color: rgb(4, 155, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--dark-secondary);
+  color: var(--primary-color);
 }
 
 .titulo h1 {
-    margin: 0;
+  margin: 0;
 }
 
 .titulo p {
-    margin-top: 5px;
-    font-size: 18px;
+  margin-top: 5px;
+  font-size: 18px;
 }
 
 h1,
 h2 {
-
-    transition: .3s;
-
+  transition: 0.3s;
 }
 
 h1 {
+  font-size: 40px;
 
-    font-size: 40px;
+  color: #a39905;
 
-    color: #0d56ff;
+  margin-bottom: 25px;
 
-    margin-bottom: 25px;
-
-    text-align: center;
-
+  text-align: center;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    font-size: 30px;
+  font-size: 30px;
 
-    color: var(--primary-color);
+  color: var(--primary-color);
 
-    margin-top: 40px;
+  margin-top: 40px;
 
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    border-bottom: 2px solid #60a5fa;
+  border-bottom: 2px solid #ffbc02;
 
-    padding-bottom: 8px;
+  padding-bottom: 8px;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 }
 
 h3 {
+  font-size: 22px;
 
-    font-size: 22px;
+  color: #2563eb;
 
-    color: #2563eb;
+  margin-top: 30px;
 
-    margin-top: 30px;
-
-    margin-bottom: 10px;
-
+  margin-bottom: 10px;
 }
 
 h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 p {
+  font-size: 17px;
 
-    font-size: 17px;
+  line-height: 1.7;
 
-    line-height: 1.7;
+  color: #ffffff;
 
-    color: #ffffff;
-
-    margin-bottom: 18px;
-
+  margin-bottom: 18px;
 }
 
 main {
-    padding: 30px 40px;
-    transition: margin-left .3s ease;
-    align-items: center;
-    width: 100%;
+  padding: 30px 40px;
+  transition: margin-left 0.3s ease;
+  align-items: center;
+  width: 100%;
 }
 
 main h2 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 main p {
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 :root {
+  /* ========================================
+       VORTRYA — MEDIEVAL FANTASY PALETTE
+    ======================================== */
 
-    /* ===== CORES PRINCIPAIS ===== */
+  /* ===== CORES PRINCIPAIS ===== */
 
-    --primary-color: #00d9ff;
-    --secondary-color: #ff006e;
-    --accent-color: #ffd700;
+  --primary-color: #d4af37;
+  --secondary-color: #8b5cf6;
+  --accent-color: #f0c75e;
 
-    /* ===== BACKGROUNDS ===== */
+  /* Ouro principal */
+  --gold: #d4af37;
+  --gold-light: #f0c75e;
+  --gold-dark: #8f6b1f;
+  --gold-soft: rgba(212, 175, 55, 0.15);
 
-    --dark-bg: #0a0e27;
-    --dark-secondary: #121933;
-    --card-bg: #1a1f3a;
-    --card-hover: #252b4d;
+  /* ===== CORES DE COMBATE ===== */
 
-    /* ===== TEXTO ===== */
+  --magic-purple: #9b6cff;
+  --magic-violet: #6d3fd9;
 
-    --text-light: #ffffff;
-    --text-secondary: #d1d5db;
-    --text-muted: #9ca3af;
+  --danger-red: #c43d3d;
+  --danger-light: #ef5350;
+  --danger-dark: #7f2020;
 
-    /* ===== BORDAS ===== */
+  --electric-blue: #6fa8ff;
+  --ice-blue: #8bc6ff;
 
-    --border: rgba(255, 255, 255, .08);
-    --border-hover: rgba(255, 255, 255, .18);
+  /* ===== BACKGROUNDS ===== */
 
-    /* ===== SOMBRAS ===== */
+  --dark-bg: #070b18;
+  --dark-secondary: #0c1222;
+  --dark-tertiary: #111827;
 
-    --shadow-small: 0 4px 10px rgba(0, 0, 0, .20);
-    --shadow-medium: 0 10px 25px rgba(0, 0, 0, .30);
-    --shadow-large: 0 18px 45px rgba(0, 0, 0, .45);
+  --card-bg: #0d1424;
+  --card-bg-light: #121a2d;
+  --card-hover: #182239;
 
-    /* ===== GRADIENTES ===== */
+  /* ===== TEXTO ===== */
 
-    --gradient-1: linear-gradient(135deg, #00d9ff, #0099cc);
-    --gradient-2: linear-gradient(135deg, #ff006e, #ff4081);
-    --gradient-3: linear-gradient(135deg, #ffd700, #ffaa00);
+  --text-light: #f3f0e8;
+  --text-secondary: #c8c5bd;
+  --text-muted: #85878f;
 
-    /* ===== TAMANHOS ===== */
+  --text-gold: #e4bd52;
+  --text-purple: #b49aff;
 
-    --container-width: 1600px;
+  /* ===== BORDAS ===== */
 
-    --radius-small: 8px;
-    --radius-medium: 14px;
-    --radius-large: 22px;
+  --border: rgba(212, 175, 55, 0.1);
+  --border-light: rgba(255, 255, 255, 0.06);
+  --border-gold: rgba(212, 175, 55, 0.25);
+  --border-hover: rgba(212, 175, 55, 0.45);
 
-    /* ===== TRANSIÇÕES ===== */
+  /* ===== SOMBRAS ===== */
 
-    --transition-fast: .2s ease;
-    --transition: .3s ease;
-    --transition-slow: .5s ease;
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.3);
 
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  --shadow-large: 0 20px 55px rgba(0, 0, 0, 0.6);
+
+  --shadow-gold: 0 0 20px rgba(212, 175, 55, 0.12);
+
+  --shadow-purple: 0 0 20px rgba(139, 92, 246, 0.12);
+
+  /* ===== GRADIENTES ===== */
+
+  /* Ouro medieval */
+  --gradient-gold: linear-gradient(135deg, #8f6b1f, #d4af37, #f0c75e);
+
+  /* Ouro mais discreto */
+  --gradient-gold-soft: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.16),
+    rgba(212, 175, 55, 0.04)
+  );
+
+  /* Magia */
+  --gradient-magic: linear-gradient(135deg, #5b3bb8, #9b6cff);
+
+  /* Sangue / perigo */
+  --gradient-danger: linear-gradient(135deg, #7f2020, #c43d3d);
+
+  /* Fundo geral */
+  --gradient-dark: linear-gradient(135deg, #070b18, #0c1222);
+
+  /* ===== TAMANHOS ===== */
+
+  --container-width: 1400px;
+
+  --radius-small: 6px;
+  --radius-medium: 10px;
+  --radius-large: 16px;
+
+  /* ===== TRANSIÇÕES ===== */
+
+  --transition-fast: 0.18s ease;
+  --transition: 0.28s ease;
+  --transition-slow: 0.45s ease;
+
+  /* ===== TIPOGRAFIA ===== */
+
+  --font-display: "Cinzel", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ===== EFEITOS ===== */
+
+  --glow-gold: 0 0 12px rgba(212, 175, 55, 0.2);
+
+  --glow-purple: 0 0 16px rgba(155, 108, 255, 0.2);
 }
 
 .btn {
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-primary {
-    background: var(--gradient-1);
-    color: var(--dark-bg);
-    box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+  background: var(--gradient-1);
+  color: var(--dark-bg);
+  box-shadow: 0 8px 24px var(--primary-color);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(0, 217, 255, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px var(--primary-color);
 }
 
 .btn-secondary {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    transition: all 0.3s ease;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background: var(--gradient-1);
-    color: var(--dark-bg);
-    transform: translateY(-3px);
+  background: var(--gradient-1);
+  color: var(--dark-bg);
+  transform: translateY(-3px);
 }
 
 .container {
+  width: min(100%, var(--container));
 
-    width: min(100%, var(--container));
+  margin: auto;
 
-    margin: auto;
-
-    padding: 0 40px;
-
+  padding: 0 40px;
 }
 
 .logo {
-    font-family: "Cinzel", serif;
+  font-family: "Cinzel", serif;
 }
