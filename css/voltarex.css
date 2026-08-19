@@ -1,0 +1,770 @@
+/* =========================================================
+   VOLTAREX — PÁGINA DO BOSS
+========================================================= */
+
+.boss-page {
+  width: min(1500px, 94%);
+  margin: 40px auto 80px;
+
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 28px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   BOSS BAR LATERAL
+========================================================= */
+
+.boss-sidebar {
+  position: sticky;
+  top: 100px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(20, 24, 45, 0.96),
+    rgba(7, 10, 24, 0.98)
+  );
+
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.boss-sidebar-title {
+  padding: 20px 18px;
+
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #ffd700;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boss-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 10px;
+
+  margin: 5px 7px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border 0.25s ease,
+    transform 0.25s ease;
+}
+
+.boss-nav-item:hover {
+  background: rgba(255, 215, 0, 0.06);
+  border-color: rgba(255, 215, 0, 0.25);
+
+  transform: translateX(3px);
+}
+
+.boss-nav-item.active {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.13),
+    rgba(255, 215, 0, 0.03)
+  );
+
+  border-color: rgba(255, 215, 0, 0.55);
+
+  box-shadow: inset 3px 0 0 #ffd700;
+}
+
+.boss-nav-item img {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.boss-nav-item strong {
+  display: block;
+
+  color: #f4f4f4;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-bottom: 3px;
+}
+
+.boss-nav-item small {
+  display: block;
+
+  color: #8f96a8;
+
+  font-size: 10px;
+}
+
+.boss-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 18px;
+
+  margin-top: 6px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #ffd700;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.boss-all:hover {
+  background: rgba(255, 215, 0, 0.06);
+}
+
+/* =========================================================
+   ÁREA PRINCIPAL
+========================================================= */
+
+.boss-main {
+  min-width: 0;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.boss-hero {
+  position: relative;
+
+  min-height: 430px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #080c1b;
+}
+
+.boss-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  opacity: 0.82;
+}
+
+.boss-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 8, 20, 0.98) 0%,
+    rgba(5, 8, 20, 0.82) 35%,
+    rgba(5, 8, 20, 0.25) 75%,
+    rgba(5, 8, 20, 0.15) 100%
+  );
+}
+
+.boss-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 570px;
+
+  padding: 55px 48px;
+}
+
+.boss-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: #8f96a8;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.boss-breadcrumb i {
+  font-size: 8px;
+}
+
+.boss-hero h1 {
+  margin: 0;
+
+  font-family: "Cinzel", serif;
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  line-height: 1;
+
+  color: #ffd15a;
+
+  letter-spacing: 2px;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.boss-hero h2 {
+  margin: 12px 0 24px;
+
+  font-size: 13px;
+
+  color: #bfc4d0;
+
+  letter-spacing: 2px;
+}
+
+.boss-hero p {
+  color: #d1d5df;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+.boss-tags {
+  display: flex;
+  gap: 8px;
+
+  margin: 22px 0;
+}
+
+.tag {
+  padding: 6px 10px;
+
+  border-radius: 4px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.tag.purple {
+  color: #d78cff;
+  background: rgba(160, 70, 255, 0.14);
+}
+
+.tag.red {
+  color: #ff6262;
+  background: rgba(255, 60, 60, 0.13);
+}
+
+.tag.gold {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.12);
+}
+
+.boss-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.boss-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+
+  color: #d9dce5;
+
+  background: rgba(8, 11, 25, 0.7);
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.boss-button:hover {
+  border-color: rgba(255, 215, 0, 0.45);
+
+  color: #ffd700;
+
+  transform: translateY(-2px);
+}
+
+.boss-button.primary {
+  background: linear-gradient(135deg, #d99e16, #8e6100);
+
+  border-color: #e6b82d;
+
+  color: #fff;
+}
+
+.boss-button.primary:hover {
+  color: #fff;
+
+  box-shadow: 0 8px 25px rgba(255, 190, 40, 0.2);
+}
+
+/* =========================================================
+   STATUS / STATS
+========================================================= */
+
+.boss-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+.boss-stat {
+  min-height: 82px;
+
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: rgba(12, 16, 32, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+}
+
+.boss-stat > i {
+  font-size: 22px;
+
+  color: #8771ff;
+}
+
+.boss-stat span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #ffd700;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.boss-stat strong {
+  color: #e0e3eb;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   PAINÉIS
+========================================================= */
+
+.boss-info-grid {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.85fr;
+
+  gap: 14px;
+
+  margin-top: 14px;
+}
+
+.boss-panel {
+  padding: 25px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 20, 38, 0.96),
+    rgba(8, 11, 24, 0.96)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+}
+
+.panel-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ffd700;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.purple-text {
+  color: #ad7aff;
+}
+
+.red-text {
+  color: #ff5555;
+}
+
+.boss-panel > p {
+  color: #c5c9d4;
+
+  line-height: 1.7;
+
+  font-size: 13px;
+
+  margin-bottom: 24px;
+}
+
+.boss-panel > p i {
+  color: #a878ff;
+
+  margin-right: 8px;
+}
+
+/* =========================================================
+   ATAQUES
+========================================================= */
+
+.attack {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.attack:last-child {
+  border-bottom: none;
+}
+
+.attack > i {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 6px;
+
+  color: #b274ff;
+
+  background: rgba(140, 70, 255, 0.12);
+
+  border: 1px solid rgba(140, 70, 255, 0.2);
+}
+
+.attack strong {
+  display: block;
+
+  color: #c27cff;
+
+  font-size: 11px;
+
+  margin-bottom: 4px;
+}
+
+.attack p {
+  margin: 0;
+
+  color: #9298a8;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   FASES
+========================================================= */
+
+.boss-phases {
+  margin-top: 14px;
+
+  padding: 25px;
+
+  background: rgba(10, 14, 28, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #ffd700;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.phases-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.phase {
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  overflow: hidden;
+
+  min-height: 120px;
+
+  border-radius: 7px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #090d1d;
+}
+
+.phase img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 120px;
+
+  object-fit: cover;
+}
+
+.phase > div {
+  padding: 13px;
+}
+
+.phase span {
+  display: block;
+
+  color: #56baff;
+
+  font-size: 9px;
+
+  margin-bottom: 7px;
+}
+
+.phase strong {
+  display: block;
+
+  color: #e1e4eb;
+
+  font-size: 11px;
+
+  margin-bottom: 8px;
+}
+
+.phase p {
+  margin: 0;
+
+  color: #8f96a7;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+.phase-two {
+  border-color: rgba(160, 90, 255, 0.5);
+}
+
+.phase-two span {
+  color: #bd78ff;
+}
+
+.phase-three {
+  border-color: rgba(255, 60, 60, 0.5);
+}
+
+.phase-three span {
+  color: #ff5b5b;
+}
+
+/* =========================================================
+   PARTE INFERIOR
+========================================================= */
+
+.boss-bottom-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 14px;
+}
+
+.reward-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+}
+
+.reward {
+  min-height: 70px;
+
+  display: flex;
+  align-items: end;
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(35, 27, 10, 0.8),
+    rgba(10, 12, 22, 0.9)
+  );
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+}
+
+.reward span {
+  color: #d8dbe4;
+
+  font-size: 11px;
+}
+
+.curiosities p {
+  color: #aeb4c2;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.curiosities p i {
+  color: #a875ff;
+
+  margin-right: 8px;
+}
+
+/* =========================================================
+   FRASE FINAL
+========================================================= */
+
+.boss-quote {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  color: #9f68ff;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 16px;
+
+  font-style: italic;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1100px) {
+  .boss-page {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+
+  .boss-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boss-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phases-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .boss-page {
+    width: 94%;
+
+    grid-template-columns: 1fr;
+  }
+
+  .boss-sidebar {
+    position: relative;
+    top: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boss-sidebar-title,
+  .boss-all {
+    grid-column: 1 / -1;
+  }
+
+  .boss-hero {
+    min-height: 500px;
+  }
+
+  .boss-hero-content {
+    padding: 35px 25px;
+  }
+
+  .boss-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .boss-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}

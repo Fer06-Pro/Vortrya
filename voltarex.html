@@ -1,525 +1,534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/avortrya.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/bosses.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Voltarex | Vortrya</title>
-</head>
 
-<body class="voltarex">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- NAVBAR -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/avortrya.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/bosses.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- CSS ESPECÍFICO DO BOSS -->
+    <link rel="stylesheet" href="css/voltarex.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
     <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo"> Vortrya </a>
 
-        <div class="nav-container">
+        <ul class="nav-menu">
+          <li>
+            <a href="index.html">Início</a>
+          </li>
 
-            <a href="index.html" class="logo">
-                Vortrya
+          <li class="dropdown">
+            <a href="#">
+              Jogo
+              <i class="fa-solid fa-chevron-down"></i>
             </a>
 
-            <ul class="nav-menu" id="navMenu">
-
-                <li><a href="index.html">Início</a></li>
-
-                <li class="dropdown">
-                    <a href="#">Jogo <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="historia.html">História</a></li>
-                        <li><a href="gameplay.html">Gameplay</a></li>
-                        <li><a href="guia.html">Guia do Iniciante</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Progressão <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="classes.html">Classes</a></li>
-                        <li><a href="atributos.html">Atributos</a></li>
-                        <li><a href="equipamentos.html">Equipamentos</a></li>
-                        <li><a href="itens.html">Itens</a></li>
-                        <li><a href="crafting.html">Crafting</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Combate <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="inimigos.html">Inimigos</a></li>
-                        <li><a href="bosses.html">Bosses</a></li>
-                        <li><a href="raids.html">Raids</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Mundo <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="mapa.html">Mapa</a></li>
-                        <li><a href="regioes.html">Regiões</a></li>
-                        <li><a href="faccoes.html">Facções</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Sistema <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="economia.html">Economia</a></li>
-                        <li><a href="missoes.html">Missões</a></li>
-                        <li><a href="ranking.html">Ranking</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Desenvolvimento <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="temporadas.html">Temporadas</a></li>
-                        <li><a href="atualizacoes.html">Atualizações</a></li>
-                        <li><a href="roadmap.html">Roadmap</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li><a href="faq.html">FAQ</a></li>
-
+            <ul class="dropdown-menu">
+              <li><a href="historia.html">História</a></li>
+              <li><a href="gameplay.html">Gameplay</a></li>
+              <li><a href="guia.html">Guia do Iniciante</a></li>
             </ul>
+          </li>
 
+          <li class="dropdown">
+            <a href="#">
+              Progressão
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
 
-            <!-- BUSCA -->
-            <div class="nav-search">
+            <ul class="dropdown-menu">
+              <li><a href="classes.html">Classes</a></li>
+              <li><a href="atributos.html">Atributos</a></li>
+              <li><a href="equipamentos.html">Equipamentos</a></li>
+              <li><a href="itens.html">Itens</a></li>
+              <li><a href="crafting.html">Crafting</a></li>
+            </ul>
+          </li>
 
-                <i class="fa-solid fa-magnifying-glass"></i>
+          <li class="dropdown">
+            <a href="#">
+              Combate
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
 
-                <input type="text" id="navSearch" placeholder="Buscar...">
+            <ul class="dropdown-menu">
+              <li><a href="inimigos.html">Inimigos</a></li>
+              <li><a href="bosses.html">Bosses</a></li>
+              <li><a href="raids.html">Raids</a></li>
+            </ul>
+          </li>
 
-                <span class="search-shortcut">
-                    CTRL K
-                </span>
+          <li class="dropdown">
+            <a href="#">
+              Mundo
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
 
-            </div>
+            <ul class="dropdown-menu">
+              <li><a href="mapa.html">Mapa</a></li>
+              <li><a href="regioes.html">Regiões</a></li>
+              <li><a href="faccoes.html">Facções</a></li>
+            </ul>
+          </li>
 
+          <li class="dropdown">
+            <a href="#">
+              Sistema
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
 
+            <ul class="dropdown-menu">
+              <li><a href="economia.html">Economia</a></li>
+              <li><a href="missoes.html">Missões</a></li>
+              <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="faq.html">FAQ</a>
+          </li>
+        </ul>
+
+        <div class="nav-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+          <span class="search-shortcut">CTRL K</span>
         </div>
-
+      </div>
     </nav>
 
+    <!-- =========================
+         PÁGINA DO BOSS
+    ========================= -->
 
     <main class="boss-page">
+      <!-- =========================
+             BOSS BAR
+        ========================= -->
+
+      <aside class="boss-sidebar">
+        <div class="boss-sidebar-title">
+          <i class="fa-solid fa-skull"></i>
+          <span>BOSSES</span>
+        </div>
 
-        <!-- BARRA DOS BOSSES -->
+        <!-- VOLTAREX -->
 
-        <aside class="bossbar">
-
-            <h3>BOSSES</h3>
-
-            <a href="voltarex.html" class="boss-select active">
-                <span>⚡</span>
-                <div>
-                    <strong>Voltarex</strong>
-                    <small>Dragão de Plasma</small>
-                </div>
-            </a>
-
-            <a href="crystallix.html" class="boss-select">
-                <span>💎</span>
-                <div>
-                    <strong>Crystallix</strong>
-                    <small>Guardião de Gelo</small>
-                </div>
-            </a>
-
-            <a href="umbravore.html" class="boss-select">
-                <span>🌑</span>
-                <div>
-                    <strong>Umbravore</strong>
-                    <small>Devorador de Sombras</small>
-                </div>
-            </a>
-
-            <a href="titanus-prime.html" class="boss-select">
-                <span>⚙</span>
-                <div>
-                    <strong>Titanus Prime</strong>
-                    <small>Colosso Mecânico</small>
-                </div>
-            </a>
-
-            <a href="#" class="boss-all">
-                VER TODOS →
-            </a>
-
-        </aside>
-
-
-        <!-- CONTEÚDO -->
-
-        <section class="boss-content">
-
-            <!-- HERO -->
-
-            <section class="boss-hero">
-
-                <div class="boss-hero-text">
-
-                    <span class="breadcrumb">
-                        BOSSES　&gt;　<b>VOLTAREX</b>
-                    </span>
-
-                    <h1>VOLTAREX</h1>
-
-                    <h2>DRAGÃO DE PLASMA ELÉTRICO</h2>
-
-                    <p>
-                        Uma entidade de pura energia e tempestade.
-                        Voltarex controla os céus com sua velocidade e
-                        poder destrutivo, sendo um dos seres mais temidos
-                        de Vortrya.
-                    </p>
-
-                    <div class="boss-tags">
-
-                        <span class="tag purple">✦ ENDGAME</span>
-                        <span class="tag red">⚔ RAID</span>
-                        <span class="tag gold">✦ ÉPICO</span>
-
-                    </div>
-
-                    <div class="boss-actions">
-
-                        <a href="#lore">📖 VER LORE</a>
-                        <a href="#recompensas">🎁 VER RECOMPENSAS</a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="boss-image">
-
-                    <img src="Voltarex.png" alt="Voltarex">
-
-                </div>
-
-            </section>
-
-
-            <!-- STATS -->
-
-            <section class="boss-stats">
-
-                <div class="stat-card">
-
-                    <span class="stat-icon">☠</span>
-
-                    <div>
-                        <h4>TIPO</h4>
-                        <p>Dragão de Plasma Elétrico</p>
-                    </div>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <span class="stat-icon">☠</span>
-
-                    <div>
-                        <h4>DIFICULDADE</h4>
-                        <p class="stars">★★★★★</p>
-                    </div>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <span class="stat-icon">◈</span>
-
-                    <div>
-                        <h4>FASES</h4>
-                        <p>3</p>
-                    </div>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <span class="stat-icon lightning">ϟ</span>
-
-                    <div>
-                        <h4>ELEMENTO</h4>
-                        <p>Elétrico</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <nav class="boss-tabs">
-
-                <a href="#informacoes" class="active">INFORMAÇÕES</a>
-                <a href="#habilidades">HABILIDADES</a>
-                <a href="#estrategias">ESTRATÉGIAS</a>
-                <a href="#lore">LORE</a>
-                <a href="#galeria">GALERIA</a>
-
-            </nav>
-
-            <!-- INFORMAÇÕES -->
-
-            <section class="info-grid" id="informacoes">
-
-                <div class="info-box">
-
-
-                    <article>
-
-                        <h3>MECÂNICA PRINCIPAL</h3>
-
-                        <p>
-                            Ultra-rápido, com ataques que cobrem grandes
-                            áreas em padrões previsíveis mas exigem reflexos
-                            excepcionais. Carrega energia antes de ataques
-                            devastadores.
-                        </p>
-
-                        <h3>VULNERABILIDADES</h3>
-
-                        <p>
-                            Predição de movimentos e interrupção do
-                            carregamento de energia com habilidades
-                            de atordoamento.
-                        </p>
-
-                        <h3 class="danger">FASE FINAL</h3>
-
-                        <p>
-                            Na fase final, entra em modo berserk com
-                            velocidade dobrada, mas defesa reduzida.
-                        </p>
-
-                    </article>
-
-                </div>
-
-
-                <!-- ATAQUES -->
-
-                <div class="info-box attacks">
-
-                    <h3>ATAQUES PRINCIPAIS</h3>
-
-                    <div class="attack">
-
-                        <div class="attack-icon">ϟ</div>
-
-                        <div>
-                            <h4>RAIO CELESTIAL</h4>
-                            <p>Dispara múltiplos raios em área ampla.</p>
-                            <small>Padrão: Círculos concêntricos</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="attack">
-
-                        <div class="attack-icon">ϟ</div>
-
-                        <div>
-                            <h4>INVESTIDA ELÉTRICA</h4>
-                            <p>Avança em linha reta em alta velocidade.</p>
-                            <small>Padrão: Linha reta longa</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="attack">
-
-                        <div class="attack-icon">✦</div>
-
-                        <div>
-                            <h4>EXPLOSÃO DE PLASMA</h4>
-                            <p>Libera uma explosão ao redor do corpo.</p>
-                            <small>Padrão: Área circular</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="attack">
-
-                        <div class="attack-icon">ϟ</div>
-
-                        <div>
-                            <h4>SOBRECARGA</h4>
-                            <p>Carrega energia e libera um ataque devastador.</p>
-                            <small>Padrão: Área total</small>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- FASES -->
-
-            <section class="phases">
-
-                <h2>⚡ FASES DA BATALHA</h2>
-
-                <div class="phase-line"></div>
-
-                <div class="phase-grid">
-
-                    <div class="phase-card">
-
-                        <img src="voltarex.png">
-
-                        <div>
-                            <span>FASE 1</span>
-                            <h3>100% - 66% HP</h3>
-                            <p>
-                                Movimentos rápidos e ataques elétricos
-                                em área média.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="phase-card">
-
-                        <img src="voltarex.png">
-
-                        <div>
-                            <span>FASE 2</span>
-                            <h3>66% - 33% HP</h3>
-                            <p>
-                                Novos padrões de ataque e aumento da
-                                frequência das habilidades.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="phase-card final">
-
-                        <img src="voltarex.png">
-
-                        <div>
-                            <span>FASE 3</span>
-                            <h3>33% - 0% HP</h3>
-                            <p>
-                                Modo berserk ativado. Velocidade dobrada
-                                e ataques devastadores.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- PARTE INFERIOR -->
-
-            <section class="bottom-grid">
-
-                <div class="info-box" id="recompensas">
-
-                    <h2>⚡ RECOMPENSAS PRINCIPAIS</h2>
-
-                    <div class="rewards">
-
-                        <div>
-                            <div class="reward-icon">◈</div>
-                            <span>Escama de Voltarex</span>
-                        </div>
-
-                        <div>
-                            <div class="reward-icon">✦</div>
-                            <span>Núcleo de Plasma</span>
-                        </div>
-
-                        <div>
-                            <div class="reward-icon">◈</div>
-                            <span>Garra Eletrificada</span>
-                        </div>
-
-                        <div>
-                            <div class="reward-icon">✦</div>
-                            <span>Coração da Tempestade</span>
-                        </div>
-
-                        <div>
-                            <div class="reward-icon">ϟ</div>
-                            <span>Asas do Trovão</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="info-box curiosities">
-
-                    <h2>CURIOSIDADES</h2>
-
-                    <p>◆ Voltarex é considerado o senhor das tempestades em Vortrya.</p>
-                    <p>◆ Sua energia é capaz de distorcer o espaço ao seu redor.</p>
-                    <p>◆ Sua aparição anuncia mudanças climáticas extremas.</p>
-
-                </div>
-
-            </section>
-
-
-            <p class="boss-quote">
-                "Os céus se rasgam, os trovões anunciam.
-                A tempestade tem nome: Voltarex."
+        <a href="voltarex.html" class="boss-nav-item active">
+          <img src="imagens/Voltarex.png" alt="Voltarex" />
+
+          <div>
+            <strong>Voltarex</strong>
+            <small>Dragão de Plasma</small>
+          </div>
+        </a>
+
+        <!-- CRYSTALLIS -->
+
+        <a href="crystallis.html" class="boss-nav-item">
+          <img src="imagens/Crystallis.png" alt="Crystallis" />
+
+          <div>
+            <strong>Crystallis</strong>
+            <small>Guardião de Gelo</small>
+          </div>
+        </a>
+
+        <!-- UMBRAVORE -->
+
+        <a href="umbravore.html" class="boss-nav-item">
+          <img src="imagens/Umbravore.png" alt="Umbravore" />
+
+          <div>
+            <strong>Umbravore</strong>
+            <small>Devorador de Sombras</small>
+          </div>
+        </a>
+
+        <!-- TITANUS PRIME -->
+
+        <a href="titanusprime.html" class="boss-nav-item">
+          <img src="imagens/TitanusPrime.png" alt="Titanus Prime" />
+
+          <div>
+            <strong>Titanus Prime</strong>
+            <small>Colosso Mecânico</small>
+          </div>
+        </a>
+
+        <!-- IONIZAL -->
+
+        <a href="ionizal.html" class="boss-nav-item">
+          <img src="imagens/Ionizal.png" alt="Ionizal" />
+
+          <div>
+            <strong>Ionizal</strong>
+            <small>Profeta das Cinzas</small>
+          </div>
+        </a>
+
+        <!-- ABYSSION -->
+
+        <a href="abyssion.html" class="boss-nav-item">
+          <img src="imagens/Abyssion.png" alt="Abyssion" />
+
+          <div>
+            <strong>Abyssion</strong>
+            <small>Terror Abissal</small>
+          </div>
+        </a>
+
+        <a href="bosses.html" class="boss-all">
+          VER TODOS
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </aside>
+
+      <!-- =========================
+             CONTEÚDO DO VOLTAREX
+        ========================= -->
+
+      <div class="boss-main">
+        <!-- HERO -->
+
+        <section class="boss-hero">
+          <img
+            src="imagens/Voltarex.png"
+            alt="Voltarex"
+            class="boss-hero-image"
+          />
+
+          <div class="boss-hero-overlay"></div>
+
+          <div class="boss-hero-content">
+            <span class="boss-breadcrumb">
+              BOSSES
+              <i class="fa-solid fa-chevron-right"></i>
+              VOLTAREX
+            </span>
+
+            <h1>VOLTAREX</h1>
+
+            <h2>DRAGÃO DE PLASMA ELÉTRICO</h2>
+
+            <p>
+              Uma entidade de pura energia e tempestade. Voltarex controla os
+              céus com sua velocidade e poder destrutivo, sendo um dos seres
+              mais temidos de Vortrya.
             </p>
 
+            <div class="boss-tags">
+              <span class="tag purple">
+                <i class="fa-solid fa-gem"></i>
+                ENDGAME
+              </span>
+
+              <span class="tag red">
+                <i class="fa-solid fa-users"></i>
+                RAID
+              </span>
+
+              <span class="tag gold">
+                <i class="fa-solid fa-crown"></i>
+                ÉPICO
+              </span>
+            </div>
+
+            <div class="boss-actions">
+              <a href="#lore" class="boss-button primary">
+                <i class="fa-solid fa-book-open"></i>
+                VER LORE
+              </a>
+
+              <a href="#recompensas" class="boss-button">
+                <i class="fa-solid fa-gift"></i>
+                VER RECOMPENSAS
+              </a>
+            </div>
+          </div>
         </section>
 
+        <!-- INFORMAÇÕES -->
+
+        <section class="boss-stats">
+          <div class="boss-stat">
+            <i class="fa-solid fa-dragon"></i>
+
+            <div>
+              <span>TIPO</span>
+              <strong>Dragão de Plasma Elétrico</strong>
+            </div>
+          </div>
+
+          <div class="boss-stat">
+            <i class="fa-solid fa-skull"></i>
+
+            <div>
+              <span>DIFICULDADE</span>
+              <strong>★★★★★</strong>
+            </div>
+          </div>
+
+          <div class="boss-stat">
+            <i class="fa-solid fa-layer-group"></i>
+
+            <div>
+              <span>FASES</span>
+              <strong>3</strong>
+            </div>
+          </div>
+
+          <div class="boss-stat">
+            <i class="fa-solid fa-bolt"></i>
+
+            <div>
+              <span>ELEMENTO</span>
+              <strong>Elétrico</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- INFORMAÇÕES + ATAQUES -->
+
+        <section class="boss-info-grid" id="lore">
+          <div class="boss-panel">
+            <span class="panel-label"> MECÂNICA PRINCIPAL </span>
+
+            <p>
+              Ultra-rápido, com ataques que cobrem grandes áreas em padrões
+              previsíveis mas exigem reflexos excepcionais. Carrega energia
+              antes de ataques devastadores.
+            </p>
+
+            <span class="panel-label purple-text"> VULNERABILIDADES </span>
+
+            <p>
+              <i class="fa-solid fa-diamond"></i>
+              Predição de movimentos e interrupção do carregamento de energia
+              com habilidades de atordoamento.
+            </p>
+
+            <span class="panel-label red-text"> FASE FINAL </span>
+
+            <p>
+              Na fase final, entra em modo berserk com velocidade dobrada, mas
+              defesa reduzida.
+            </p>
+          </div>
+
+          <div class="boss-panel">
+            <span class="panel-label purple-text"> ATAQUES PRINCIPAIS </span>
+
+            <div class="attack">
+              <i class="fa-solid fa-bolt"></i>
+
+              <div>
+                <strong>RAIO CELESTIAL</strong>
+                <p>Dispara múltiplos raios em área ampla.</p>
+              </div>
+            </div>
+
+            <div class="attack">
+              <i class="fa-solid fa-wand-sparkles"></i>
+
+              <div>
+                <strong>INVESTIDA ELÉTRICA</strong>
+                <p>Avança em linha reta em alta velocidade.</p>
+              </div>
+            </div>
+
+            <div class="attack">
+              <i class="fa-solid fa-circle-radiation"></i>
+
+              <div>
+                <strong>EXPLOSÃO DE PLASMA</strong>
+                <p>Libera uma explosão ao redor do corpo.</p>
+              </div>
+            </div>
+
+            <div class="attack">
+              <i class="fa-solid fa-bolt-lightning"></i>
+
+              <div>
+                <strong>SOBRECARGA</strong>
+                <p>Carrega energia e libera um ataque devastador.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FASES -->
+
+        <section class="boss-phases">
+          <div class="section-title">
+            <i class="fa-solid fa-bolt"></i>
+            FASES DA BATALHA
+          </div>
+
+          <div class="phases-grid">
+            <div class="phase phase-one">
+              <img src="imagens/Voltarex.png" alt="Fase 1" />
+
+              <div>
+                <span>FASE 1</span>
+
+                <strong>100% - 66% HP</strong>
+
+                <p>Movimentos rápidos e ataques elétricos em área média.</p>
+              </div>
+            </div>
+
+            <div class="phase phase-two">
+              <img src="imagens/Voltarex.png" alt="Fase 2" />
+
+              <div>
+                <span>FASE 2</span>
+
+                <strong>66% - 33% HP</strong>
+
+                <p>
+                  Novos padrões de ataque e aumento da frequência das
+                  habilidades.
+                </p>
+              </div>
+            </div>
+
+            <div class="phase phase-three">
+              <img src="imagens/Voltarex.png" alt="Fase 3" />
+
+              <div>
+                <span>FASE 3</span>
+
+                <strong>33% - 0% HP</strong>
+
+                <p>
+                  Modo berserk ativado. Velocidade dobrada e ataques
+                  devastadores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECOMPENSAS -->
+
+        <section class="boss-bottom-grid" id="recompensas">
+          <div class="boss-panel rewards">
+            <div class="section-title">
+              <i class="fa-solid fa-gift"></i>
+              RECOMPENSAS PRINCIPAIS
+            </div>
+
+            <div class="reward-list">
+              <div class="reward">
+                <span>Escama de Voltarex</span>
+              </div>
+
+              <div class="reward">
+                <span>Núcleo de Plasma</span>
+              </div>
+
+              <div class="reward">
+                <span>Garra Eletrificada</span>
+              </div>
+
+              <div class="reward">
+                <span>Coração da Tempestade</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="boss-panel curiosities">
+            <div class="section-title">CURIOSIDADES</div>
+
+            <p>
+              <i class="fa-solid fa-diamond"></i>
+              Voltarex é considerado o senhor das tempestades em Vortrya.
+            </p>
+
+            <p>
+              <i class="fa-solid fa-diamond"></i>
+              Sua energia é tão intensa que distorce o próprio espaço ao seu
+              redor.
+            </p>
+
+            <p>
+              <i class="fa-solid fa-diamond"></i>
+              Sua aparição anuncia mudanças climáticas extremas em todo o
+              continente.
+            </p>
+          </div>
+        </section>
+
+        <div class="boss-quote">
+          "Os céus se rasgam, os trovões anunciam. A tempestade tem nome:
+          Voltarex."
+        </div>
+      </div>
     </main>
 
-</body>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Vortrya</h3>
+          <p>O maior RPG de ação cooperativo já criado.</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links Rápidos</h3>
+
+          <a href="historia.html">História</a>
+          <a href="gameplay.html">Gameplay</a>
+          <a href="bosses.html">Bosses</a>
+          <a href="raids.html">Raids</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Comunidade</h3>
+
+          <a href="#">Discord</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+          <a href="#">Twitch</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/vortrya.js"></script>
+  </body>
 </html>
