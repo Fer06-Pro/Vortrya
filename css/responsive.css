@@ -1,114 +1,271 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: var(--dark-bg);
-        flex-direction: column;
-        padding: 2rem;
-    }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--dark-bg);
+    flex-direction: column;
+    padding: 2rem;
+  }
 
-    .nav-menu.active {
-        display: flex;
-    }
+  .nav-menu.active {
+    display: flex;
+  }
 
-    .menu-toggle {
-        display: flex;
-    }
+  .menu-toggle {
+    display: flex;
+  }
 
-    .hero-title {
-        font-size: 2.5rem;
-    }
+  .hero-title {
+    font-size: 2.5rem;
+  }
 
-    .section-title {
-        font-size: 1.8rem;
-    }
+  .section-title {
+    font-size: 1.8rem;
+  }
 
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .feature-image {
-        order: -1;
-    }
+  .feature-image {
+    order: -1;
+  }
 }
 
 @media (max-width: 480px) {
-    .hero-buttons {
-        flex-direction: column;
-    }
+  .hero-buttons {
+    flex-direction: column;
+  }
 
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 1024px) {
-    .wiki-sidebar {
-        grid-template-columns: repeat(2, 1fr);
-        flex-direction: row;
-    }
+  .wiki-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+  }
 
-    .sidebar-box {
-        position: static;
-    }
+  .sidebar-box {
+    position: static;
+  }
 }
 
 @media (max-width: 768px) {
-    .wiki-sidebar {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-    }
+  .wiki-sidebar {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .page-content .container {
-        grid-template-columns: 1fr;
-    }
+  .page-content .container {
+    grid-template-columns: 1fr;
+  }
 
-    .wiki-sidebar {
-        grid-template-columns: repeat(2, 1fr);
-        flex-direction: row;
-    }
+  .wiki-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+  }
 
-    .sidebar-box {
-        position: static;
-    }
+  .sidebar-box {
+    position: static;
+  }
 }
 
 @media (max-width: 768px) {
-    .page-hero-content h1 {
-        font-size: 2rem;
-        flex-direction: column;
-    }
+  .page-hero-content h1 {
+    font-size: 2rem;
+    flex-direction: column;
+  }
 
-    .wiki-article {
-        padding: 1.5rem;
-    }
+  .wiki-article {
+    padding: 1.5rem;
+  }
 
-    .world-regions {
-        grid-template-columns: 1fr;
-    }
+  .world-regions {
+    grid-template-columns: 1fr;
+  }
 
-    .story-timeline {
-        grid-template-columns: 1fr;
-    }
+  .story-timeline {
+    grid-template-columns: 1fr;
+  }
 }
 
 .page-hero-content p {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .boss-page {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+
+  .boss-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boss-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phases-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .boss-page {
+    width: 94%;
+
+    grid-template-columns: 1fr;
+  }
+
+  .boss-sidebar {
+    position: relative;
+    top: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boss-sidebar-title,
+  .boss-all {
+    grid-column: 1 / -1;
+  }
+
+  .boss-hero {
+    min-height: 500px;
+  }
+
+  .boss-hero-content {
+    padding: 35px 25px;
+  }
+
+  .boss-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .boss-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .bosses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .bosses-page {
+    padding: 50px 20px 70px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .section-heading > p {
+    text-align: left;
+  }
+
+  .bosses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .boss-card-image {
+    height: 230px;
+  }
+
+  .bosses-warning {
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bosses-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .bosses-filters {
+    gap: 7px;
+  }
+
+  .filter-btn {
+    padding: 9px 13px;
+
+    font-size: 0.75rem;
+  }
+
+  .boss-card-image {
+    height: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-page {
+    padding: 50px 20px 70px;
+  }
+
+  .faq-hero h1 {
+    font-size: 2rem;
+  }
+
+  .faq-group-title {
+    gap: 10px;
+  }
+
+  .faq-group-title h2 {
+    font-size: 1rem;
+  }
+
+  .faq-line {
+    display: none;
+  }
+
+  .faq-categories {
+    margin-bottom: 45px;
+  }
+
+  .faq-category {
+    padding: 10px 13px;
+  }
+
+  .faq-question {
+    padding: 17px;
+
+    font-size: 0.85rem;
+  }
+
+  .faq-item.active .faq-answer p {
+    padding: 0 17px 18px;
+  }
+
+  .faq-contact {
+    align-items: flex-start;
+
+    padding: 20px;
+  }
 }

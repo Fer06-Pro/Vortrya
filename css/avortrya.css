@@ -14,14 +14,38 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
-  background: var(--dark-bg);
+  background-color: var(--dark-bg);
   color: var(--text-light);
-
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-
   overflow-x: hidden;
+
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.82), rgba(10, 10, 10, 0.9)),
+    url("../imagens/mapa-vortrya.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body:not(.home) {
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.88)),
+    url("../imagens/mapa-vortrya.png");
+}
+
+body.home {
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.35), rgba(10, 10, 10, 0.5)),
+    url("../imagens/mapa-vortrya.png");
+}
+
+body.home .mapa-container {
+  height: 100vh;
+  min-height: 0;
+  padding: 0;
 }
 
 a {
@@ -61,7 +85,7 @@ h2 {
 h1 {
   font-size: 40px;
 
-  color: #a39905;
+  color: #f7ef84;
 
   margin-bottom: 25px;
 

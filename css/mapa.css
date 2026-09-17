@@ -1,0 +1,102 @@
+
+.mapa-container {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+}
+
+/* =========================
+   BOTÕES DO MAPA
+========================= */
+
+.map-button {
+  position: absolute;
+
+  width: 180px;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: #e8d5a3;
+
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  background: rgba(20, 15, 10, 0.85);
+
+  border: 2px solid #8f7136;
+
+  clip-path: polygon(
+    8% 0%,
+    92% 0%,
+    100% 20%,
+    100% 80%,
+    92% 100%,
+    8% 100%,
+    0% 80%,
+    0% 20%
+  );
+
+  transition: 0.25s ease;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.map-button:hover {
+  background: rgba(190, 145, 45, 0.9);
+
+  border-color: #f0ce69;
+
+  color: white;
+
+  transform: scale(1.08);
+
+  filter: drop-shadow(0 0 12px rgba(220, 175, 70, 0.8));
+}
+
+/* =========================
+   POSIÇÃO DOS BOTÕES
+========================= */
+
+.historia {
+  top: 27%;
+  left: 33.6%;
+  height: 35px;
+  width: 170px;
+}
+
+.bestiario {
+  top: 29%;
+  left: 62%;
+  height: 35px;
+  width: 170px;
+}
+
+.recursos {
+  top: 48.1%;
+  left: 22.5%;
+  height: 35px;
+  width: 170px;
+}
+
+.forja {
+  top: 49%;
+  left: 46.5%;
+  height: 35px;
+  width: 170px;
+}
+
+.chefes {
+  top: 55.1%;
+  left: 66.5%;
+  height: 35px;
+  width: 170px;
+}
