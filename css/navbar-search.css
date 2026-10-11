@@ -1,0 +1,68 @@
+/* Incluir depois de navbar.css nas páginas antigas (FAQ, Bosses, index etc.) */
+.nav-container .nav-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 195px;
+  height: 38px;
+  margin-left: 8px;
+  border: 1px solid #9b7434;
+  border-radius: 7px;
+  background: #080b13e8;
+}
+.nav-container .nav-search input {
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  color: #f0dfbd;
+  border: 0;
+  outline: 0;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 0.85rem;
+}
+.nav-container .nav-search-results {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: min(380px, 90vw);
+  max-height: 65vh;
+  overflow: auto;
+  z-index: 3000;
+  background: #0c1019;
+  border: 1px solid #987332;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 12px 30px #000a;
+}
+.nav-container .nav-search-results[hidden] {
+  display: none !important;
+}
+.nav-container .nav-search-results a {
+  display: block !important;
+  padding: 9px 12px !important;
+  color: #f0ce89 !important;
+  text-decoration: none;
+  font-size: 0.85rem !important;
+}
+.nav-container .nav-search-results a:hover {
+  background: #6c532d55 !important;
+}
+.nav-container .nav-search-results small {
+  display: block;
+  color: #bcb3a2;
+  font-size: 0.73rem;
+}
+.nav-container .nav-search-results p {
+  padding: 10px;
+  color: #d7c7a6;
+}
+.faq-item[hidden],
+.tab-panel[hidden] {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .nav-container .nav-search {
+    flex-basis: 150px;
+  }
+}

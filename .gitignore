@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+
+# Variáveis e segredos locais
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

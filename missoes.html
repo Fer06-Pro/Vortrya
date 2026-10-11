@@ -1,154 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<title> Vortrya </title>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/avortrya.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/missoes.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-
-<body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quadro de Missões | Vortrya Wiki</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/avortrya.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/wiki-pages.css" rel="stylesheet" />
+  </head>
+  <body class="wiki-page" data-page="missoes">
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-crown"></i>
-                <span>Vortrya</span>
-            </div>
-
-              <ul class="nav-menu" id="navMenu">
-
-                <li><a href="index.html">Início</a></li>
-
-                <li class="dropdown">
-                    <a href="#">Jogo <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="historia.html">História</a></li>
-                        <li><a href="gameplay.html">Gameplay</a></li>
-                        <li><a href="guia.html">Guia do Iniciante</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Progressão <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="classes.html">Classes</a></li>
-                        <li><a href="atributos.html">Atributos</a></li>
-                        <li><a href="equipamentos.html">Equipamentos</a></li>
-                        <li><a href="itens.html">Itens</a></li>
-                        <li><a href="crafting.html">Crafting</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Combate <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="inimigos.html">Inimigos</a></li>
-                        <li><a href="bosses.html">Bosses</a></li>
-                        <li><a href="raids.html">Raids</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Mundo <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="mapa.html">Mapa</a></li>
-                        <li><a href="regioes.html">Regiões</a></li>
-                        <li><a href="faccoes.html">Facções</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Sistema <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="economia.html">Economia</a></li>
-                        <li><a href="missoes.html">Missões</a></li>
-                        <li><a href="ranking.html">Ranking</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Desenvolvimento <i class="fa-solid fa-chevron-down"></i></a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="temporadas.html">Temporadas</a></li>
-                        <li><a href="atualizacoes.html">Atualizações</a></li>
-                        <li><a href="roadmap.html">Roadmap</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li><a href="faq.html">FAQ</a></li>
-
+      <div class="nav-container">
+        <a class="logo" href="index.html">
+          <span class="logo-title"> VORTRYA </span>
+          <span class="logo-subtitle"> WIKI </span>
+        </a>
+        <button
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          class="wiki-menu-toggle"
+          type="button"
+        >
+          ☰
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="index.html"> Início </a>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Jogo
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="historia.html"> História </a>
+              </li>
+              <li>
+                <a href="gameplay.html"> Gameplay </a>
+              </li>
+              <li>
+                <a href="guia.html"> Guia do Iniciante </a>
+              </li>
             </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Progressão
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="classes.html"> Classes </a>
+              </li>
+              <li>
+                <a href="atributos.html"> Atributos </a>
+              </li>
+              <li>
+                <a href="equipamentos.html"> Equipamentos </a>
+              </li>
+              <li>
+                <a href="itens.html"> Itens </a>
+              </li>
+              <li>
+                <a href="crafting.html"> Crafting </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Combate
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="inimigos.html"> Inimigos </a>
+              </li>
+              <li>
+                <a href="bosses.html"> Bosses </a>
+              </li>
+              <li>
+                <a href="raids.html"> Raids </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Mundo
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="mapa.html"> Mapa </a>
+              </li>
+              <li>
+                <a href="regioes.html"> Regiões </a>
+              </li>
+              <li>
+                <a href="faccoes.html"> Facções </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Sistema
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="economia.html"> Economia </a>
+              </li>
+              <li>
+                <a href="missoes.html"> Missões </a>
+              </li>
+              <li>
+                <a href="ranking.html"> Ranking </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Desenvolvimento
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="eventos.html"> Eventos </a>
+              </li>
+              <li>
+                <a href="temporadas.html"> Temporadas </a>
+              </li>
+              <li>
+                <a href="atualizacoes.html"> Atualizações </a>
+              </li>
+              <li>
+                <a href="roadmap.html"> Roadmap </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="faq.html"> FAQ </a>
+          </li>
+        </ul>
+        <div class="nav-search" role="search">
+          <input
+            aria-label="Buscar páginas do Vortrya"
+            autocomplete="off"
+            id="navSearch"
+            placeholder="Buscar na wiki..."
+            type="search"
+          />
+          <div class="nav-search-results" hidden="" id="navSearchResults"></div>
         </div>
-
+      </div>
     </nav>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Vortrya</h4>
-                    <p>O maior RPG de ação cooperativo já criado.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="historia.html">História</a></li>
-                        <li><a href="gameplay.html">Gameplay</a></li>
-                        <li><a href="bosses.html">Bosses</a></li>
-                        <li><a href="raids.html">Raids</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Comunidade</h4>
-                    <ul>
-                        <li><a href="https://discord.gg/6hbDmapzbu">Discord</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">YouTube</a></li>
-                        <li><a href="#">Twitch</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Vortrya - Todos os direitos reservados.</p>
-            </div>
-        </div>
+    <main class="wiki-main">
+      <div class="wiki-heading">
+        <span class="wiki-kicker"> VORTRYA • ARQUIVO EM DESENVOLVIMENTO </span>
+        <div aria-hidden="true" class="wiki-icon">▣</div>
+        <h1>Quadro de Missões</h1>
+        <p>Contratos provisórios organizados por frequência e propósito.</p>
+        <span class="draft-tag"> Rascunho v0.1 — conceitos não oficiais </span>
+      </div>
+      <div aria-label="Filtrar conteúdo" class="filter-row" role="group">
+        <button class="filter-chip selected" data-filter="Todas" type="button">
+          Todas
+        </button>
+        <button class="filter-chip" data-filter="Diária" type="button">
+          Diária
+        </button>
+        <button class="filter-chip" data-filter="Única" type="button">
+          Única
+        </button>
+        <button class="filter-chip" data-filter="Secundária" type="button">
+          Secundária
+        </button>
+        <button class="filter-chip" data-filter="Especial" type="button">
+          Especial
+        </button>
+      </div>
+      <div class="wiki-grid">
+        <article class="wiki-card filterable" data-category="Diária">
+          <span class="card-category"> Diária </span>
+          <h3>Patrulha da Aurora</h3>
+          <p>
+            Diária · Azul · 1 vez por dia · Investigue a trilha próxima ao
+            assentamento.
+          </p>
+        </article>
+        <article class="wiki-card filterable" data-category="Diária">
+          <span class="card-category"> Diária </span>
+          <h3>Suprimentos do Ferreiro</h3>
+          <p>Diária · Azul · 1 vez por dia · Reúna materiais básicos.</p>
+        </article>
+        <article class="wiki-card filterable" data-category="Única">
+          <span class="card-category"> Única </span>
+          <h3>O Primeiro Juramento</h3>
+          <p>Única · Dourado · Concluída apenas uma vez por personagem.</p>
+        </article>
+        <article class="wiki-card filterable" data-category="Secundária">
+          <span class="card-category"> Secundária </span>
+          <h3>Ecos na Floresta</h3>
+          <p>Secundária · Verde · Descubra a origem de ruídos incomuns.</p>
+        </article>
+        <article class="wiki-card filterable" data-category="Especial">
+          <span class="card-category"> Especial </span>
+          <h3>Sinal na Fronteira</h3>
+          <p>Especial · Roxo · Evento narrativo com requisitos futuros.</p>
+        </article>
+      </div>
+      <p class="wiki-note" hidden="" id="filter-empty">
+        Nenhum registro nesta categoria.
+      </p>
+      <nav aria-label="Outras seções" class="wiki-bottom-nav">
+        <a href="guia.html"> Guia </a>
+        <a href="atributos.html"> Atributos </a>
+        <a href="itens.html"> Itens </a>
+        <a href="crafting.html"> Forja </a>
+        <a href="inimigos.html"> Inimigos </a>
+        <a href="regioes.html"> Regiões </a>
+        <a href="faccoes.html"> Facções </a>
+        <a href="missoes.html"> Missões </a>
+      </nav>
+    </main>
+    <footer class="footer-index">
+      <div class="footer-bottom">
+        <p>© 2026 Vortrya - Todos os direitos reservados.</p>
+      </div>
     </footer>
-
-    <script src="vortrya.js"></script>
-</body>
-
+    <script defer="" src="js/wiki-pages.js"></script>
+    <script defer="True" src="js/vortrya.js"></script>
+  </body>
 </html>

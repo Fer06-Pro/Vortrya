@@ -104,18 +104,12 @@
 
 }
 
-.sobre {
-    padding: 6rem 2rem;
-    background: var(--dark-bg);
-}
-
 .section-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
     background: var(--gradient-1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     display: flex;
     align-items: center;
@@ -194,7 +188,6 @@
     font-weight: 900;
     background: var(--gradient-1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
 }
@@ -237,7 +230,6 @@
     font-size: 6rem;
     background: var(--gradient-1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: iconRotate 4s linear infinite;
 }
@@ -275,7 +267,6 @@
     font-weight: 900;
     background: var(--gradient-3);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
 }
@@ -318,7 +309,6 @@
 .shine-text {
     background: var(--gradient-2);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     display: block;
 }

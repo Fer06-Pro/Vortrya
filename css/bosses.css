@@ -2,143 +2,92 @@
    BOSSES — VORTRYA
    CODEX MEDIEVAL
 ======================================== */
-
 /* ========================================
    PÁGINA
 ======================================== */
-
 .bosses-page {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 70px 35px 100px;
 }
-
 /* ========================================
    HERO
 ======================================== */
-
 .bosses-hero {
   position: relative;
-
   max-width: 900px;
-
   margin: 0 auto 55px;
-
   text-align: center;
 }
-
 .bosses-hero::before {
   content: "";
-
   position: absolute;
-
   top: -100px;
   left: 15%;
   right: 15%;
-
   height: 350px;
-
   background: radial-gradient(
     ellipse,
     rgba(212, 175, 55, 0.07),
     transparent 70%
   );
-
   pointer-events: none;
-
   z-index: -1;
 }
-
 .section-label {
   display: inline-flex;
-
   align-items: center;
   gap: 9px;
-
   margin-bottom: 15px;
-
   color: var(--gold-light);
-
   font-family: var(--font-display);
-
   font-size: 0.72rem;
-
   letter-spacing: 0.22em;
 }
-
 .section-label i {
   color: var(--gold);
 }
-
 .bosses-hero h1 {
   margin: 0;
-
   color: var(--gold-light);
-
   font-family: var(--font-display);
-
   font-size: clamp(2.7rem, 5vw, 4.2rem);
-
   font-weight: 600;
-
   letter-spacing: 0.02em;
-
   text-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
 }
-
 .bosses-hero p {
   max-width: 720px;
-
   margin: 20px auto 0;
-
   color: var(--text-secondary);
-
   font-size: 0.95rem;
-
   line-height: 1.8;
 }
-
 /* ========================================
    FILTROS
 ======================================== */
-
 .bosses-filters {
   display: flex;
-
   justify-content: center;
-
   flex-wrap: wrap;
-
   gap: 10px;
-
   margin-bottom: 65px;
 }
-
 .filter-btn {
   position: relative;
-
   padding: 11px 20px;
-
   border: 1px solid var(--border);
-
   border-radius: var(--radius-small);
-
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.035),
     rgba(255, 255, 255, 0.01)
   );
-
   color: var(--text-secondary);
-
   font-family: var(--font-body);
-
   font-size: 0.82rem;
-
   font-weight: 600;
-
   cursor: pointer;
-
   transition:
     color var(--transition),
     background var(--transition),
@@ -146,486 +95,311 @@
     transform var(--transition),
     box-shadow var(--transition);
 }
-
-/* hover */
-
+ hover 
 .filter-btn:hover {
   transform: translateY(-2px);
-
   color: var(--gold-light);
-
   border-color: var(--border-gold);
-
   background: rgba(212, 175, 55, 0.07);
-
   box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.25),
     0 0 15px rgba(212, 175, 55, 0.05);
 }
-
-/* ativo */
-
+ ativo 
 .filter-btn.active {
   color: #0b0e15;
-
   border-color: var(--gold);
-
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
-
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.15);
 }
-
 /* ========================================
    CABEÇALHO DA SEÇÃO
 ======================================== */
-
 .bosses-section {
   margin-bottom: 60px;
 }
-
 .section-heading {
   display: flex;
-
   align-items: flex-end;
-
   justify-content: space-between;
-
   gap: 30px;
-
   margin-bottom: 30px;
 }
-
 .section-heading > div > span {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
-
   margin-bottom: 7px;
-
   color: var(--gold);
-
   font-family: var(--font-display);
-
   font-size: 0.68rem;
-
   letter-spacing: 0.18em;
 }
-
 .section-heading h2 {
   margin: 0;
-
   color: var(--text-light);
-
   font-family: var(--font-display);
-
   font-size: 1.65rem;
-
   font-weight: 600;
 }
-
 .section-heading > p {
   max-width: 430px;
-
   margin: 0;
-
   color: var(--text-muted);
-
   font-size: 0.82rem;
-
   line-height: 1.7;
-
   text-align: right;
 }
-
 /* ========================================
    GRID
 ======================================== */
-
 .bosses-grid {
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 22px;
 }
-
 /* ========================================
    CARD
 ======================================== */
-
 .boss-card {
   position: relative;
-
   overflow: hidden;
-
   background: linear-gradient(
     145deg,
     rgba(24, 31, 49, 0.95),
     rgba(10, 15, 28, 0.97)
   );
-
   border: 1px solid var(--border);
-
   border-radius: var(--radius-medium);
-
   box-shadow: var(--shadow-small);
-
   transition:
     transform var(--transition),
     border-color var(--transition),
     box-shadow var(--transition);
 }
-
 .boss-card:hover {
   transform: translateY(-7px);
-
   border-color: var(--border-gold);
-
   box-shadow:
     0 18px 40px rgba(0, 0, 0, 0.4),
     0 0 25px rgba(212, 175, 55, 0.05);
 }
-
 /* ========================================
    IMAGEM
 ======================================== */
-
 .boss-card-image {
   position: relative;
-
   display: block;
-
   height: 245px;
-
   overflow: hidden;
-
   text-decoration: none;
-
   background: #080c18;
 }
-
 .boss-card-image img {
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   display: block;
-
   transition:
     transform 0.6s ease,
     filter 0.6s ease;
 }
-
 .boss-card:hover .boss-card-image img {
   transform: scale(1.06);
-
   filter: brightness(0.72);
 }
-
 /* ========================================
    OVERLAY
 ======================================== */
-
 .boss-card-overlay {
   position: absolute;
-
   inset: 0;
-
   display: flex;
-
   align-items: flex-end;
-
   justify-content: center;
-
   padding-bottom: 22px;
-
   background: linear-gradient(
     to top,
     rgba(5, 8, 18, 0.92),
     rgba(5, 8, 18, 0.05) 65%
   );
-
   opacity: 0;
-
   transition: opacity var(--transition);
 }
-
 .boss-card:hover .boss-card-overlay {
   opacity: 1;
 }
-
 .boss-card-overlay span {
   display: inline-flex;
-
   align-items: center;
-
   gap: 9px;
-
   padding: 9px 14px;
-
   border: 1px solid rgba(212, 175, 55, 0.35);
-
   border-radius: 6px;
-
   background: rgba(8, 12, 22, 0.82);
-
   color: var(--gold-light);
-
   font-family: var(--font-display);
-
   font-size: 0.68rem;
-
   letter-spacing: 0.12em;
-
   backdrop-filter: blur(8px);
-
   transform: translateY(8px);
-
   transition:
     transform var(--transition),
     background var(--transition);
 }
-
 .boss-card:hover .boss-card-overlay span {
   transform: translateY(0);
 }
-
-.boss-card-overlay span:hover {
+.boss-card-overlay spa&#x6E:hover {
   background: rgba(212, 175, 55, 0.12);
 }
-
 /* ========================================
    CONTEÚDO
 ======================================== */
-
 .boss-card-content {
   padding: 20px 21px 18px;
 }
-
 /* ========================================
    TOPO
 ======================================== */
-
 .boss-card-top {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 10px;
-
   margin-bottom: 13px;
 }
-
 .boss-element {
   display: inline-flex;
-
   align-items: center;
-
   gap: 7px;
-
   color: var(--text-muted);
-
   font-size: 0.72rem;
 }
-
 .boss-element i {
   color: var(--gold);
-
   font-size: 0.7rem;
 }
-
 /* ========================================
    RANK
 ======================================== */
-
 .boss-rank {
   padding: 4px 8px;
-
   border: 1px solid rgba(212, 175, 55, 0.16);
-
   border-radius: 4px;
-
   color: var(--gold-light);
-
   background: rgba(212, 175, 55, 0.05);
-
   font-family: var(--font-display);
-
   font-size: 0.58rem;
-
   letter-spacing: 0.08em;
 }
-
 .boss-rank.epic {
   color: #d9c4ff;
-
   border-color: rgba(150, 110, 220, 0.22);
-
   background: rgba(150, 110, 220, 0.07);
 }
-
 .boss-rank.raid {
   color: #ffb3b3;
-
   border-color: rgba(190, 70, 70, 0.22);
-
   background: rgba(190, 70, 70, 0.07);
 }
-
 /* ========================================
    TÍTULO
 ======================================== */
-
 .boss-card h3 {
   margin: 0 0 4px;
-
   color: var(--text-light);
-
   font-family: var(--font-display);
-
   font-size: 1.35rem;
-
   font-weight: 600;
-
   transition: color var(--transition);
 }
-
 .boss-card:hover h3 {
   color: var(--gold-light);
 }
-
 .boss-title {
   margin: 0 0 13px;
-
   color: var(--gold-dark);
-
   font-size: 0.74rem;
-
   font-weight: 600;
 }
-
 .boss-description {
   min-height: 68px;
-
   margin: 0;
-
   color: var(--text-secondary);
-
   font-size: 0.79rem;
-
   line-height: 1.7;
 }
-
 /* ========================================
    FOOTER DO CARD
 ======================================== */
-
 .boss-card-footer {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 10px;
-
   margin-top: 18px;
-
   padding-top: 14px;
-
   border-top: 1px solid var(--border);
 }
-
 .boss-card-footer span {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
-
   color: var(--text-muted);
-
   font-size: 0.68rem;
 }
-
 .boss-card-footer i {
   color: var(--gold-dark);
 }
-
 /* ========================================
    AVISO
 ======================================== */
-
 .bosses-warning {
   display: flex;
-
   align-items: center;
-
   gap: 20px;
-
   max-width: 950px;
-
   margin: 70px auto 0;
-
   padding: 23px 27px;
-
   border: 1px solid rgba(212, 175, 55, 0.14);
-
   border-radius: var(--radius-medium);
-
   background: linear-gradient(
     135deg,
     rgba(212, 175, 55, 0.055),
     rgba(212, 175, 55, 0.012)
   );
 }
-
 .warning-icon {
   width: 45px;
-
   height: 45px;
-
   flex-shrink: 0;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border: 1px solid rgba(212, 175, 55, 0.22);
-
   border-radius: 50%;
-
   color: var(--gold);
-
   background: rgba(212, 175, 55, 0.06);
-
   font-size: 0.9rem;
 }
-
 .bosses-warning h3 {
   margin: 0 0 5px;
-
   color: var(--gold-light);
-
   font-family: var(--font-display);
-
   font-size: 0.95rem;
 }
-
 .bosses-warning p {
   margin: 0;
-
   color: var(--text-secondary);
-
   font-size: 0.78rem;
-
   line-height: 1.7;
 }
+/* BOSSES — OCULTAR CARDS FILTRADOS */
+.bosses-page .boss-card[hidden] {
+  display: none !important;
+}
+
+.bosses-page .boss-card[hidden] { display: none !important; }
+.boss-name-link { color: inherit; text-decoration: none; }
+.boss-name-link:hover { color: #ffd700; }

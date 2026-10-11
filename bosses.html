@@ -1,233 +1,190 @@
 <!doctype html>
+
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Bosses | Vortrya</title>
-
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- FONT AWESOME -->
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="css/avortrya.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/bosses.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link href="css/avortrya.css" rel="stylesheet" />
+    <link href="css/wiki-pages.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/bosses.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
   </head>
-
-  <body>
-    <!-- =========================
-     NAVBAR
-========================= -->
-
+  <body class="wiki-page" data-page="bosses">
     <nav class="navbar">
       <div class="nav-container">
-        <a href="index.html" class="logo"> Vortrya </a>
-
+        <a class="logo" href="index.html">
+          <span class="logo-title"> VORTRYA </span>
+          <span class="logo-subtitle"> WIKI </span>
+        </a>
+        <button
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          class="wiki-menu-toggle"
+          type="button"
+        >
+          ☰
+        </button>
         <ul class="nav-menu" id="navMenu">
           <li>
             <a href="index.html"> Início </a>
           </li>
-
-          <!-- JOGO -->
-
           <li class="dropdown">
-            <a href="#">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
               Jogo
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="historia.html"> História </a>
               </li>
-
               <li>
                 <a href="gameplay.html"> Gameplay </a>
               </li>
-
               <li>
                 <a href="guia.html"> Guia do Iniciante </a>
               </li>
             </ul>
           </li>
-
-          <!-- PROGRESSÃO -->
-
           <li class="dropdown">
-            <a href="#">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
               Progressão
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="classes.html"> Classes </a>
               </li>
-
               <li>
                 <a href="atributos.html"> Atributos </a>
               </li>
-
               <li>
                 <a href="equipamentos.html"> Equipamentos </a>
               </li>
-
               <li>
                 <a href="itens.html"> Itens </a>
               </li>
-
               <li>
                 <a href="crafting.html"> Crafting </a>
               </li>
             </ul>
           </li>
-
-          <!-- COMBATE -->
-
           <li class="dropdown">
-            <a href="#">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
               Combate
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="inimigos.html"> Inimigos </a>
               </li>
-
               <li>
                 <a href="bosses.html"> Bosses </a>
               </li>
-
               <li>
                 <a href="raids.html"> Raids </a>
               </li>
             </ul>
           </li>
-
-          <!-- MUNDO -->
-
           <li class="dropdown">
-            <a href="#">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
               Mundo
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="mapa.html"> Mapa </a>
               </li>
-
               <li>
                 <a href="regioes.html"> Regiões </a>
               </li>
-
               <li>
                 <a href="faccoes.html"> Facções </a>
               </li>
             </ul>
           </li>
-
-          <!-- SISTEMA -->
-
           <li class="dropdown">
-            <a href="#">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
               Sistema
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="economia.html"> Economia </a>
               </li>
-
               <li>
                 <a href="missoes.html"> Missões </a>
               </li>
-
               <li>
                 <a href="ranking.html"> Ranking </a>
               </li>
             </ul>
           </li>
-
-          <!-- DESENVOLVIMENTO -->
-
           <li class="dropdown">
-            <a href="#">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
               Desenvolvimento
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="eventos.html"> Eventos </a>
               </li>
-
               <li>
                 <a href="temporadas.html"> Temporadas </a>
               </li>
-
               <li>
                 <a href="atualizacoes.html"> Atualizações </a>
               </li>
-
               <li>
                 <a href="roadmap.html"> Roadmap </a>
               </li>
             </ul>
           </li>
-
           <li>
             <a href="faq.html"> FAQ </a>
           </li>
         </ul>
-
-        <!-- BUSCA -->
-
-        <div class="nav-search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-
-          <input type="text" placeholder="Buscar..." />
-
-          <span class="search-shortcut"> CTRL K </span>
+        <div class="nav-search" role="search">
+          <input
+            aria-label="Buscar páginas do Vortrya"
+            autocomplete="off"
+            id="navSearch"
+            placeholder="Buscar na wiki..."
+            type="search"
+          />
+          <div class="nav-search-results" hidden="" id="navSearchResults"></div>
         </div>
       </div>
     </nav>
-
     <!-- =========================
      CONTEÚDO PRINCIPAL
 ========================= -->
-
     <main class="bosses-page">
       <!-- HERO -->
-
       <section class="bosses-hero">
         <div class="bosses-hero-content">
           <span class="section-label">
             <i class="fa-solid fa-skull"></i>
             BESTIÁRIO DE VORTRYA
           </span>
-
           <h1>Bosses</h1>
-
           <p>
             Criaturas colossais que dominam as regiões de Vortrya. Cada chefe
             possui mecânicas próprias, diferentes fases de batalha e recompensas
@@ -235,23 +192,16 @@
           </p>
         </div>
       </section>
-
       <!-- CATEGORIAS -->
-
       <section class="bosses-filters">
         <button class="filter-btn active" data-filter="all">Todos</button>
-
         <button class="filter-btn" data-filter="epico">Épicos</button>
-
         <button class="filter-btn" data-filter="raid">Raids</button>
-
         <button class="filter-btn" data-filter="endgame">Endgame</button>
       </section>
-
       <!-- =========================
          BOSSES
     ========================= -->
-
       <section class="bosses-section">
         <div class="section-heading">
           <div>
@@ -259,23 +209,18 @@
               <i class="fa-solid fa-bolt"></i>
               CHEFES CONHECIDOS
             </span>
-
             <h2>Os grandes desafios</h2>
           </div>
-
           <p>
             Escolha um boss para conhecer suas habilidades, estratégias, fases e
             recompensas.
           </p>
         </div>
-
         <div class="bosses-grid">
           <!-- VOLTAREX -->
-
           <article class="boss-card" data-category="endgame epico">
-            <a href="voltarex.html" class="boss-card-image">
-              <img src="../imagens/Voltarex.png" alt="Voltarex" />
-
+            <a class="boss-card-image" href="boss.html?id=voltarex">
+              <img alt="Voltarex" src="imagens/Voltarex.png" />
               <div class="boss-card-overlay">
                 <span>
                   VER DETALHES
@@ -283,32 +228,27 @@
                 </span>
               </div>
             </a>
-
             <div class="boss-card-content">
               <div class="boss-card-top">
                 <span class="boss-element">
                   <i class="fa-solid fa-bolt"></i>
                   Elétrico
                 </span>
-
                 <span class="boss-rank epic"> ÉPICO </span>
               </div>
-
-              <h3>Voltarex</h3>
-
+              <a class="boss-name-link" href="boss.html?id=voltarex"
+                ><h3>Voltarex</h3></a
+              >
               <p class="boss-title">Dragão de Plasma Elétrico</p>
-
               <p class="boss-description">
                 Uma entidade de pura energia e tempestade capaz de controlar os
                 céus e desencadear ataques elétricos devastadores.
               </p>
-
               <div class="boss-card-footer">
                 <span>
                   <i class="fa-solid fa-layer-group"></i>
                   3 Fases
                 </span>
-
                 <span>
                   <i class="fa-solid fa-skull"></i>
                   Endgame
@@ -316,13 +256,10 @@
               </div>
             </div>
           </article>
-
           <!-- CRYSTALLIS -->
-
           <article class="boss-card" data-category="epico">
-            <a href="crystallis.html" class="boss-card-image">
-              <img src="../imagens/Crystallis.png" alt="Crystallis" />
-
+            <a class="boss-card-image" href="boss.html?id=crystallis">
+              <img alt="Crystallis" src="imagens/Crystallis.png" />
               <div class="boss-card-overlay">
                 <span>
                   VER DETALHES
@@ -330,32 +267,24 @@
                 </span>
               </div>
             </a>
-
             <div class="boss-card-content">
               <div class="boss-card-top">
                 <span class="boss-element">
                   <i class="fa-regular fa-snowflake"></i>
                   Gelo
                 </span>
-
                 <span class="boss-rank epic"> ÉPICO </span>
               </div>
-
-              <h3>Crystallis</h3>
-
+              <a class="boss-name-link" href="boss.html?id=crystallis"
+                ><h3>Crystallis</h3></a
+              >
               <p class="boss-title">Guardião de Gelo</p>
-
               <p class="boss-description">
                 Uma criatura ancestral revestida por cristais congelados que
                 domina regiões cobertas por neve.
               </p>
-
               <div class="boss-card-footer">
-                <span>
-                  <i class="fa-solid fa-layer-group"></i>
-                  3 Fases
-                </span>
-
+                <span> <i class="fa-solid fa-layer-group"></i> 3 Fases </span>
                 <span>
                   <i class="fa-solid fa-snowflake"></i>
                   Gelo
@@ -363,13 +292,10 @@
               </div>
             </div>
           </article>
-
           <!-- UMBRAVORE -->
-
           <article class="boss-card" data-category="endgame">
-            <a href="umbravore.html" class="boss-card-image">
-              <img src="../imagens/Umbravore.png" alt="Umbravore" />
-
+            <a class="boss-card-image" href="boss.html?id=umbravore">
+              <img alt="Umbravore" src="imagens/Umbravore.png" />
               <div class="boss-card-overlay">
                 <span>
                   VER DETALHES
@@ -377,32 +303,24 @@
                 </span>
               </div>
             </a>
-
             <div class="boss-card-content">
               <div class="boss-card-top">
                 <span class="boss-element">
                   <i class="fa-solid fa-moon"></i>
                   Sombrio
                 </span>
-
                 <span class="boss-rank"> ENDGAME </span>
               </div>
-
-              <h3>Umbravore</h3>
-
+              <a class="boss-name-link" href="boss.html?id=umbravore"
+                ><h3>Umbravore</h3></a
+              >
               <p class="boss-title">Devorador de Sombras</p>
-
               <p class="boss-description">
                 Uma entidade das trevas capaz de consumir energia e desaparecer
                 completamente dentro das sombras.
               </p>
-
               <div class="boss-card-footer">
-                <span>
-                  <i class="fa-solid fa-layer-group"></i>
-                  3 Fases
-                </span>
-
+                <span> <i class="fa-solid fa-layer-group"></i> 2 Fases </span>
                 <span>
                   <i class="fa-solid fa-moon"></i>
                   Sombrio
@@ -410,13 +328,10 @@
               </div>
             </div>
           </article>
-
           <!-- TITANUS PRIME -->
-
           <article class="boss-card" data-category="raid">
-            <a href="titanusprime.html" class="boss-card-image">
-              <img src="../imagens/TitanusPrime.png" alt="Titanus Prime" />
-
+            <a class="boss-card-image" href="boss.html?id=titanusprime">
+              <img alt="Titanus Prime" src="imagens/TitanusPrime.png" />
               <div class="boss-card-overlay">
                 <span>
                   VER DETALHES
@@ -424,32 +339,27 @@
                 </span>
               </div>
             </a>
-
             <div class="boss-card-content">
               <div class="boss-card-top">
                 <span class="boss-element">
                   <i class="fa-solid fa-gears"></i>
                   Mecânico
                 </span>
-
                 <span class="boss-rank raid"> RAID </span>
               </div>
-
-              <h3>Titanus Prime</h3>
-
+              <a class="boss-name-link" href="boss.html?id=titanusprime"
+                ><h3>Titanus Prime</h3></a
+              >
               <p class="boss-title">Colosso Mecânico</p>
-
               <p class="boss-description">
                 Uma máquina de guerra colossal construída para enfrentar grupos
                 inteiros de caçadores simultaneamente.
               </p>
-
               <div class="boss-card-footer">
                 <span>
                   <i class="fa-solid fa-users"></i>
                   Raid
                 </span>
-
                 <span>
                   <i class="fa-solid fa-gears"></i>
                   Mecânico
@@ -457,13 +367,10 @@
               </div>
             </div>
           </article>
-
           <!-- IONIZAL -->
-
           <article class="boss-card" data-category="epico">
-            <a href="ionizal.html" class="boss-card-image">
-              <img src="../imagens/Ionizal.jpg" alt="Ionizal" />
-
+            <a class="boss-card-image" href="boss.html?id=ionizal">
+              <img alt="Ionizal" src="imagens/Ionizal.png" />
               <div class="boss-card-overlay">
                 <span>
                   VER DETALHES
@@ -471,32 +378,24 @@
                 </span>
               </div>
             </a>
-
             <div class="boss-card-content">
               <div class="boss-card-top">
                 <span class="boss-element">
                   <i class="fa-solid fa-fire"></i>
                   Cinzas
                 </span>
-
                 <span class="boss-rank epic"> ÉPICO </span>
               </div>
-
-              <h3>Ionizal</h3>
-
+              <a class="boss-name-link" href="boss.html?id=ionizal"
+                ><h3>Ionizal</h3></a
+              >
               <p class="boss-title">Profeta das Cinzas</p>
-
               <p class="boss-description">
                 Uma criatura envolta em chamas e cinzas que transforma o campo
                 de batalha em uma zona de destruição.
               </p>
-
               <div class="boss-card-footer">
-                <span>
-                  <i class="fa-solid fa-layer-group"></i>
-                  3 Fases
-                </span>
-
+                <span> <i class="fa-solid fa-layer-group"></i> 3 Fases </span>
                 <span>
                   <i class="fa-solid fa-fire"></i>
                   Fogo
@@ -504,13 +403,10 @@
               </div>
             </div>
           </article>
-
           <!-- ABYSSION -->
-
           <article class="boss-card" data-category="endgame">
-            <a href="abyssion.html" class="boss-card-image">
-              <img src="../imagens/Abyssion.jpg" alt="Abyssion" />
-
+            <a class="boss-card-image" href="boss.html?id=abyssion">
+              <img alt="Abyssion" src="imagens/Abyssion.png" />
               <div class="boss-card-overlay">
                 <span>
                   VER DETALHES
@@ -518,32 +414,24 @@
                 </span>
               </div>
             </a>
-
             <div class="boss-card-content">
               <div class="boss-card-top">
                 <span class="boss-element">
                   <i class="fa-solid fa-eye"></i>
                   Abissal
                 </span>
-
                 <span class="boss-rank"> ENDGAME </span>
               </div>
-
-              <h3>Abyssion</h3>
-
+              <a class="boss-name-link" href="boss.html?id=abyssion"
+                ><h3>Abyssion</h3></a
+              >
               <p class="boss-title">Terror Abissal</p>
-
               <p class="boss-description">
                 Uma presença monstruosa vinda das profundezas que distorce o
                 ambiente ao seu redor.
               </p>
-
               <div class="boss-card-footer">
-                <span>
-                  <i class="fa-solid fa-layer-group"></i>
-                  3 Fases
-                </span>
-
+                <span> <i class="fa-solid fa-layer-group"></i> 4 Fases </span>
                 <span>
                   <i class="fa-solid fa-skull"></i>
                   Endgame
@@ -553,19 +441,15 @@
           </article>
         </div>
       </section>
-
       <!-- =========================
          AVISO
     ========================= -->
-
       <section class="bosses-warning">
         <div class="warning-icon">
           <i class="fa-solid fa-triangle-exclamation"></i>
         </div>
-
         <div>
           <h3>Prepare-se antes da batalha</h3>
-
           <p>
             Alguns bosses possuem mecânicas capazes de eliminar caçadores
             despreparados. Conheça seus padrões, prepare seus equipamentos e
@@ -574,43 +458,12 @@
         </div>
       </section>
     </main>
-
-    <!-- =========================
-     FOOTER
-========================= -->
-
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>Vortrya</h3>
-
-          <p>O maior RPG de ação cooperativo já criado.</p>
-        </div>
-
-        <div class="footer-column">
-          <h3>Links Rápidos</h3>
-
-          <a href="historia.html">História</a>
-          <a href="gameplay.html">Gameplay</a>
-          <a href="bosses.html">Bosses</a>
-          <a href="raids.html">Raids</a>
-        </div>
-
-        <div class="footer-column">
-          <h3>Comunidade</h3>
-
-          <a href="#">Discord</a>
-          <a href="#">Twitter</a>
-          <a href="#">YouTube</a>
-          <a href="#">Twitch</a>
-        </div>
-      </div>
-    </footer>
-
     <!-- =========================
      JS
 ========================= -->
-
-    <script src="js/avortrya.js"></script>
+    <script defer="" src="js/boss-data.js"></script>
+    <script defer="" src="js/boss.js"></script>
+    <script defer="" src="js/wiki-pages.js"></script>
+    <script defer="" src="js/vortrya.js"></script>
   </body>
 </html>

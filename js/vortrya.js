@@ -1,275 +1,162 @@
-// ===============================
-// ANIMAÇÃO DOS CARDS AO APARECER
-// ===============================
-
-// // ===============================
-// // BOTÃO VOLTAR AO TOPO
-// // ===============================
-
-// const voltar = document.getElementById("voltar");
-
-// if (voltar) {
-
-//     voltar.onclick = () => {
-
-//         window.scrollTo({
-
-//             top: 0,
-//             behavior: "smooth"
-
-//         });
-
-//     };
-
-// }
-
-// ===============================
-// MENU MOBILE
-// ===============================
-
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-if (menuToggle && navMenu) {
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-
-  navMenu
-    .querySelectorAll(".dropdown-menu a, .nav-menu > li > a:not(.dropdown > a)")
-    .forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-      });
+// VORTRYA v0.2 — comportamento compartilhado (sem duplicar eventos)
+document.addEventListener("DOMContentLoaded", () => {
+  const pages = [
+    ["Início", "index.html", "Mapa principal"],
+    ["Guia do Iniciante", "guia.html", "Primeiros passos"],
+    ["Atributos", "atributos.html", "Superforça, dash, salto duplo"],
+    ["Itens", "itens.html", "Armas e materiais"],
+    ["Crafting", "crafting.html", "Receitas e forja"],
+    ["Inimigos", "inimigos.html", "Criaturas e NPCs"],
+    ["Regiões", "regioes.html", "Biomas e exploração"],
+    ["Facções", "faccoes.html", "Grupos do mundo"],
+    ["Missões", "missoes.html", "Missões diárias e únicas"],
+    ["FAQ", "faq.html", "Perguntas frequentes"],
+    ["Bosses", "bosses.html", "Chefes e combate"],
+    ["História", "historia.html", "Lore"],
+    ["Classes", "classes.html", "Progressão"],
+    ["Equipamentos", "equipamentos.html", "Armaduras e armas"],
+    ["Mapa", "mapa.html", "Mundo de Vortrya"],
+    ["Raids", "raids.html", "Desafios em grupo"],
+  ];
+  // Barra de pesquisa. Em páginas antigas, injeta se houver navbar e não houver campo.
+  const nav = document.querySelector(".nav-container");
+  if (nav && !document.getElementById("navSearch")) {
+    const wrap = document.createElement("div");
+    wrap.className = "nav-search";
+    wrap.setAttribute("role", "search");
+    wrap.innerHTML =
+      '<input id="navSearch" type="search" placeholder="Buscar na wiki..." aria-label="Buscar páginas do Vortrya" autocomplete="off"><div class="nav-search-results" id="navSearchResults" hidden></div>';
+    nav.append(wrap);
+  }
+  const input = document.getElementById("navSearch"),
+    results = document.getElementById("navSearchResults");
+  const normalize = (value) =>
+    value
+      .toLocaleLowerCase("pt-BR")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  const renderSearch = () => {
+    if (!input || !results) return;
+    const term = normalize(input.value.trim());
+    results.replaceChildren();
+    if (!term) {
+      results.hidden = true;
+      return;
+    }
+    const matches = pages.filter(([name, , description]) =>
+      normalize(name + " " + description).includes(term),
+    );
+    if (!matches.length) {
+      const p = document.createElement("p");
+      p.textContent = "Nenhuma página encontrada.";
+      results.append(p);
+    }
+    matches.slice(0, 9).forEach(([name, url, description]) => {
+      const a = document.createElement("a");
+      a.href = url;
+      a.textContent = name;
+      const small = document.createElement("small");
+      small.textContent = description;
+      a.append(small);
+      results.append(a);
     });
-}
-
-// ===============================
-// SCROLL SUAVE PARA ÂNCORAS
-// ===============================
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute("href"));
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    results.hidden = false;
+  };
+  input?.addEventListener("input", renderSearch);
+  input?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      results.hidden = true;
+      input.blur();
+    }
+    if (event.key === "Enter" && !results.hidden) {
+      const first = results.querySelector("a");
+      if (first) window.location.href = first.href;
     }
   });
-});
-
-document.querySelectorAll(".dropdown > a").forEach((item) => {
-  item.addEventListener("click", function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-
-      this.parentElement.classList.toggle("active");
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".nav-search") && results) results.hidden = true;
+  });
+  // Realce do menu atual, apenas um mecanismo
+  const current = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-menu a[href]").forEach((a) => {
+    if (a.getAttribute("href")?.split("/").pop() === current) {
+      a.classList.add("active");
+      a.closest("li")?.classList.add("active");
     }
   });
-});
-
-const tabs = document.querySelectorAll(".boss-tabs button");
-const panels = document.querySelectorAll(".tab-panel");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = tab.dataset.tab;
-
-    // Remove a aba ativa
-    tabs.forEach((item) => {
-      item.classList.remove("active");
-    });
-
-    // Ativa a aba clicada
-    tab.classList.add("active");
-
-    // Esconde todos os conteúdos
-    panels.forEach((panel) => {
-      panel.classList.remove("active");
-    });
-
-    // Mostra o conteúdo correspondente
-    document.getElementById(target).classList.add("active");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".boss-tabs button");
-  const panels = document.querySelectorAll(".tab-panel");
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const target = tab.dataset.tab;
-
-      // Remove o active de todos os botões
-      tabs.forEach((button) => {
-        button.classList.remove("active");
-      });
-
-      // Remove o active de todos os conteúdos
-      panels.forEach((panel) => {
-        panel.classList.remove("active");
-      });
-
-      // Ativa o botão clicado
-      tab.classList.add("active");
-
-      // Ativa o conteúdo correspondente
-      const targetPanel = document.getElementById(target);
-
-      if (targetPanel) {
-        targetPanel.classList.add("active");
-      }
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop().toLowerCase();
-
-  const menuItems = document.querySelectorAll(".nav-menu > li");
-
-  menuItems.forEach((item) => {
-    const links = item.querySelectorAll("a");
-
-    links.forEach((link) => {
-      const href = link.getAttribute("href");
-
-      if (!href || href === "#") {
+  // Âncoras: nunca executar querySelector('#')
+  document.querySelectorAll('a[href^="#"]').forEach((a) =>
+    a.addEventListener("click", (event) => {
+      const hash = a.getAttribute("href");
+      if (!hash || hash === "#") {
+        event.preventDefault();
         return;
       }
-
-      const linkPage = href.split("/").pop().toLowerCase();
-
-      if (linkPage === currentPage) {
-        // Ativa o próprio link
-        link.classList.add("active");
-
-        // Se estiver dentro de dropdown,
-        // ativa também o menu principal
-        const dropdown = link.closest(".dropdown");
-
-        if (dropdown) {
-          const parentLink = dropdown.querySelector(":scope > a");
-
-          if (parentLink) {
-            parentLink.classList.add("active");
-          }
-        }
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
+    }),
+  );
+  document
+    .getElementById("voltar")
+    ?.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+  // Bosses: um único listener por aba, com suporte a data-tab e aria-controls
+  document.querySelectorAll(".boss-tabs button").forEach((button) =>
+    button.addEventListener("click", () => {
+      const id = button.dataset.tab || button.getAttribute("aria-controls");
+      const panel = id ? document.getElementById(id) : null;
+      if (!panel) return;
+      const group = button.closest(".boss-tabs");
+      group?.querySelectorAll("button").forEach((b) => {
+        b.classList.toggle("active", b === button);
+        b.setAttribute("aria-selected", String(b === button));
+      });
+      document.querySelectorAll(".tab-panel").forEach((p) => {
+        p.classList.toggle("active", p === panel);
+        p.hidden = p !== panel;
+      });
+    }),
+  );
+  // FAQ: categoria + texto aplicados em conjunto
+  let faqCategory = "todos";
+  const faqSearch = document.getElementById("faqSearch");
+  const applyFAQ = () => {
+    const q = normalize(faqSearch?.value.trim() || "");
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      const category = item.dataset.category || "";
+      const show =
+        (faqCategory === "todos" || category === faqCategory) &&
+        normalize(item.textContent).includes(q);
+      item.hidden = !show;
+      item.style.display = show ? "" : "none";
     });
-  });
+  };
+  document.querySelectorAll(".faq-category").forEach((button) =>
+    button.addEventListener("click", () => {
+      faqCategory = button.dataset.category || "todos";
+      document
+        .querySelectorAll(".faq-category")
+        .forEach((b) => b.classList.toggle("active", b === button));
+      applyFAQ();
+    }),
+  );
+  faqSearch?.addEventListener("input", applyFAQ);
+  document.querySelectorAll(".faq-question").forEach((button) =>
+    button.addEventListener("click", () => {
+      const item = button.closest(".faq-item");
+      if (!item) return;
+      const opening = !item.classList.contains("active");
+      document.querySelectorAll(".faq-item").forEach((i) => {
+        i.classList.remove("active");
+        i.querySelector(".faq-question")?.setAttribute(
+          "aria-expanded",
+          "false",
+        );
+      });
+      item.classList.toggle("active", opening);
+      button.setAttribute("aria-expanded", String(opening));
+    }),
+  );
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop().toLowerCase();
-
-  const links = document.querySelectorAll(".nav-menu a");
-
-  links.forEach((link) => {
-    const href = link.getAttribute("href")?.split("/").pop().toLowerCase();
-
-    if (!href || href === "#") return;
-
-    if (href === currentPage) {
-      const li = link.closest("li");
-
-      if (li) {
-        li.classList.add("active");
-
-        const parentDropdown = li.closest(".dropdown");
-
-        if (parentDropdown) {
-          parentDropdown.classList.add("active");
-        }
-      }
-    }
-  });
-});
-
-// ===============================
-// FAQ — VORTRYA
-// ===============================
-
-// ABRIR / FECHAR PERGUNTAS
-
-document.querySelectorAll(".faq-question").forEach((question) => {
-  question.addEventListener("click", () => {
-    const item = question.closest(".faq-item");
-
-    const isOpen = item.classList.contains("active");
-
-    // Fecha todas as outras perguntas
-
-    document.querySelectorAll(".faq-item").forEach((otherItem) => {
-      otherItem.classList.remove("active");
-    });
-
-    // Abre a selecionada
-
-    if (!isOpen) {
-      item.classList.add("active");
-    }
-  });
-});
-
-// ===============================
-// FILTRO POR CATEGORIA
-// ===============================
-
-const faqCategories = document.querySelectorAll(".faq-category");
-
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqCategories.forEach((category) => {
-  category.addEventListener("click", () => {
-    const selectedCategory = category.dataset.category;
-
-    // Atualiza botão ativo
-
-    faqCategories.forEach((button) => {
-      button.classList.remove("active");
-    });
-
-    category.classList.add("active");
-
-    // Mostra / esconde perguntas
-
-    faqItems.forEach((item) => {
-      const itemCategory = item.dataset.category;
-
-      if (selectedCategory === "todos" || itemCategory === selectedCategory) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    });
-  });
-});
-
-// ===============================
-// BUSCA DO FAQ
-// ===============================
-
-const faqSearch = document.getElementById("faqSearch");
-
-if (faqSearch) {
-  faqSearch.addEventListener("input", () => {
-    const search = faqSearch.value.toLowerCase().trim();
-
-    faqItems.forEach((item) => {
-      const text = item.textContent.toLowerCase();
-
-      if (text.includes(search)) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    });
-  });
-}

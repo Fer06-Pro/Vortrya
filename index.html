@@ -3,8 +3,15 @@
   <title>Vortrya</title>
 
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/avortrya.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/mapa.css" />
@@ -12,41 +19,187 @@
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/homepage.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/wiki-pages.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  
-<body class="home">
+
+  <body class="wiki-page home" data-page="index">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="logo" href="index.html">
+          <span class="logo-title"> VORTRYA </span>
+          <span class="logo-subtitle"> WIKI </span>
+        </a>
+        <button
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          class="wiki-menu-toggle"
+          type="button"
+        >
+          ☰
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="index.html"> Início </a>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Jogo
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="historia.html"> História </a>
+              </li>
+              <li>
+                <a href="gameplay.html"> Gameplay </a>
+              </li>
+              <li>
+                <a href="guia.html"> Guia do Iniciante </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Progressão
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="classes.html"> Classes </a>
+              </li>
+              <li>
+                <a href="atributos.html"> Atributos </a>
+              </li>
+              <li>
+                <a href="equipamentos.html"> Equipamentos </a>
+              </li>
+              <li>
+                <a href="itens.html"> Itens </a>
+              </li>
+              <li>
+                <a href="crafting.html"> Crafting </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Combate
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="inimigos.html"> Inimigos </a>
+              </li>
+              <li>
+                <a href="bosses.html"> Bosses </a>
+              </li>
+              <li>
+                <a href="raids.html"> Raids </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Mundo
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="mapa.html"> Mapa </a>
+              </li>
+              <li>
+                <a href="regioes.html"> Regiões </a>
+              </li>
+              <li>
+                <a href="faccoes.html"> Facções </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Sistema
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="economia.html"> Economia </a>
+              </li>
+              <li>
+                <a href="missoes.html"> Missões </a>
+              </li>
+              <li>
+                <a href="ranking.html"> Ranking </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button aria-expanded="false" class="nav-drop-toggle" type="button">
+              Desenvolvimento
+              <span aria-hidden="true"> ⌄ </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="eventos.html"> Eventos </a>
+              </li>
+              <li>
+                <a href="temporadas.html"> Temporadas </a>
+              </li>
+              <li>
+                <a href="atualizacoes.html"> Atualizações </a>
+              </li>
+              <li>
+                <a href="roadmap.html"> Roadmap </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="faq.html"> FAQ </a>
+          </li>
+        </ul>
+        <div class="nav-search" role="search">
+          <input
+            aria-label="Buscar páginas do Vortrya"
+            autocomplete="off"
+            id="navSearch"
+            placeholder="Buscar na wiki..."
+            type="search"
+          />
+          <div class="nav-search-results" hidden="" id="navSearchResults"></div>
+        </div>
+      </div>
+    </nav>
 
     <main class="mapa-container">
+      <a href="historia.html" class="map-button historia">
+        <img src="imagens/Story.png" alt="História" />
+      </a>
 
-        <a href="historia.html" class="map-button historia">
-            <span>História</span>
-        </a>
+      <a href="inimigos.html" class="map-button bestiario">
+        <img src="imagens/Enemies.png" alt="Inimigos" />
+      </a>
 
-        <a href="bestiario.html" class="map-button bestiario">
-            <span>Bestiário</span>
-        </a>
+      <a href="chefes.html" class="map-button chefes">
+        <img src="imagens/Bosses.png" alt="Chefes" />
+      </a>
 
-        <a href="chefes.html" class="map-button chefes">
-            <span>Chefes</span>
-        </a>
+      <a href="recursos.html" class="map-button recursos">
+        <img src="imagens/Resources.png" alt="Recursos" />
+      </a>
 
-        <a href="recursos.html" class="map-button recursos">
-            <span>Recursos</span>
-        </a>
-
-        <a href="equipamentos.html" class="map-button forja">
-            <span>Forja</span>
-        </a>
-
+      <a href="equipamentos.html" class="map-button forja">
+        <img src="imagens/Forge.png" alt="Forja" />
+      </a>
     </main>
 
-        <div class="footer-bottom">
-          <p>&copy; 2026 Vortrya - Todos os direitos reservados.</p>
-        </div>
-
+    <footer class="footer-index">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vortrya - Todos os direitos reservados.</p>
+      </div>
     </footer>
 
-    <script src="vortrya.js"></script>
+    <script defer="" src="js/wiki-pages.js"></script>
+    <script defer="True" src="js/vortrya.js"></script>
   </body>
 </html>
