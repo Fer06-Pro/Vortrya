@@ -1,30 +1,30 @@
 <!doctype html>
 <html lang="pt-BR">
-  <title>Vortrya</title>
-
   <head>
-
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vortrya — Início e História</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/avortrya.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/mapa.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/homepage.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/wiki-pages.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/avortrya.css" rel="stylesheet" />
+    <link href="css/wiki-pages.css" rel="stylesheet" />
+    
+    <link href="css/mapa.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/homepage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/revisao.css">
+</head>
   <body class="wiki-page home" data-page="index">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegação principal">
       <div class="nav-container">
         <a class="logo" href="index.html">
           <span class="logo-title"> VORTRYA </span>
@@ -50,7 +50,7 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="historia.html"> História </a>
+                <a href="index.html#historia"> História </a>
               </li>
               <li>
                 <a href="gameplay.html"> Gameplay </a>
@@ -73,13 +73,7 @@
                 <a href="atributos.html"> Atributos </a>
               </li>
               <li>
-                <a href="equipamentos.html"> Equipamentos </a>
-              </li>
-              <li>
                 <a href="itens.html"> Itens </a>
-              </li>
-              <li>
-                <a href="crafting.html"> Crafting </a>
               </li>
             </ul>
           </li>
@@ -170,36 +164,680 @@
         </div>
       </div>
     </nav>
-
-    <main class="mapa-container">
-      <a href="historia.html" class="map-button historia">
-        <img src="imagens/Story.png" alt="História" />
-      </a>
-
-      <a href="inimigos.html" class="map-button bestiario">
-        <img src="imagens/Enemies.png" alt="Inimigos" />
-      </a>
-
-      <a href="chefes.html" class="map-button chefes">
-        <img src="imagens/Bosses.png" alt="Chefes" />
-      </a>
-
-      <a href="recursos.html" class="map-button recursos">
-        <img src="imagens/Resources.png" alt="Recursos" />
-      </a>
-
-      <a href="equipamentos.html" class="map-button forja">
-        <img src="imagens/Forge.png" alt="Forja" />
-      </a>
+    <main class="home-main">
+      <!-- MAPA — mesmos ícones e classes de posicionamento -->
+      <section class="mapa-container" aria-label="Mapa de navegação do Vortrya">
+        <!-- HISTÓRIA: agora uma âncora no próprio início -->
+        <a href="#historia" class="map-button historia"
+          ><img src="imagens/Story.png" srcset="imagens/Story.webp" alt="História"
+        /></a>
+        <!-- INIMIGOS -->
+        <a href="inimigos.html" class="map-button bestiario"
+          ><img src="imagens/Enemies.png" srcset="imagens/Enemies.webp" alt="Inimigos"
+        /></a>
+        <!-- BOSSES -->
+        <a href="bosses.html" class="map-button chefes"
+          ><img src="imagens/Bosses.png" srcset="imagens/Bosses.webp" alt="Chefes"
+        /></a>
+        <!-- RECURSOS -->
+        <a href="itens.html#itens" class="map-button recursos"
+          ><img src="imagens/Resources.png" srcset="imagens/Resources.webp" alt="Recursos"
+        /></a>
+        <!-- FORJA -->
+        <a href="itens.html#crafting" class="map-button forja"
+          ><img src="imagens/Forge.png" srcset="imagens/Forge.webp" alt="Forja"
+        /></a>
+      </section>
+      <!-- HISTÓRIA COMPLETA — estrutura e textos preservados -->
+      <nav class="home-map-shortcuts" aria-label="Atalhos do mapa"><a href="#historia">História</a><a href="inimigos.html">Bestiário</a><a href="bosses.html">Chefes</a><a href="itens.html#itens">Recursos</a><a href="itens.html#crafting">Forja</a></nav>
+<section
+        id="historia"
+        class="home-story"
+        aria-label="A História de Vortrya"
+      >
+        <section class="page-hero">
+          <div class="page-hero-content">
+            <h1 class="story-h1">A História de Vortrya</h1>
+            <p>
+              Descubra como o mundo foi transformado, como os Caçadores surgiram
+              e quais mistérios ainda permanecem além dos Portais.
+            </p>
+          </div>
+        </section>
+        <div class="page-content">
+          <div class="container">
+            <article class="wiki-article">
+              <!-- =================================================
+                     INTRODUÇÃO
+                ================================================== -->
+              <div class="story-intro">
+                <h2>Os Registros de Vortrya</h2>
+                <p>
+                  Muito antes dos Caçadores, dos Rankings e das grandes cidades
+                  fortificadas, o mundo era diferente. A humanidade conhecia
+                  apenas aquilo que podia observar, medir e compreender.
+                </p>
+                <p>Então vieram os Portais.</p>
+                <p>
+                  O acontecimento que posteriormente seria chamado de
+                  <strong>A Grande Ruptura</strong> alterou não apenas a
+                  superfície do mundo, mas as próprias leis que governavam a
+                  realidade.
+                </p>
+              </div>
+              <!-- =================================================
+                     ERA ANTERIOR
+                ================================================== -->
+              <div class="story-chapter">
+                <span>ERA ANTERIOR</span>
+              </div>
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-scroll"></i>
+                  Antes da Ruptura
+                </h2>
+                <p>
+                  Durante séculos, a humanidade acreditou viver em um mundo
+                  regido por leis naturais imutáveis. Reinos surgiram, impérios
+                  desapareceram e civilizações construíram suas histórias sobre
+                  as ruínas das anteriores.
+                </p>
+                <p>
+                  Não havia relatos confiáveis sobre magia, criaturas
+                  sobrenaturais ou outras dimensões. O desconhecido existia
+                  apenas nos mitos, nas religiões e nas histórias transmitidas
+                  entre gerações.
+                </p>
+                <p>
+                  Entretanto, registros encontrados posteriormente indicariam
+                  que algumas civilizações antigas já haviam observado fenômenos
+                  impossíveis.
+                </p>
+                <div class="story-highlight">
+                  <i class="fas fa-eye"></i>
+                  <p>
+                    <strong>
+                      "Os antigos não chamavam aquilo de Portal. Eles chamavam
+                      de Porta dos Deuses."
+                    </strong>
+                  </p>
+                </div>
+              </section>
+              <!-- =================================================
+                     ANO 0
+                ================================================== -->
+              <div class="story-chapter">
+                <span>ANO 0</span>
+              </div>
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-bolt"></i>
+                  A Grande Ruptura
+                </h2>
+                <p>
+                  Tudo começou sem aviso. Em diferentes pontos do planeta,
+                  estruturas circulares de energia surgiram simultaneamente.
+                </p>
+                <p>
+                  Os primeiros relatos descreviam o fenômeno como uma distorção
+                  no espaço. Objetos desapareciam ao atravessar suas fronteiras
+                  e instrumentos científicos apresentavam leituras completamente
+                  incompatíveis com as leis conhecidas.
+                </p>
+                <p>
+                  Durante as primeiras horas, governos trataram os
+                  acontecimentos como fenômenos isolados. Essa interpretação
+                  durou pouco.
+                </p>
+                <div class="history-cards">
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Primeiros Portais</h3>
+                    <p>
+                      Estruturas dimensionais apareceram simultaneamente em
+                      regiões distantes do planeta.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-radiation"></i>
+                    </div>
+                    <h3>Energia Desconhecida</h3>
+                    <p>
+                      A energia liberada pelos Portais não correspondia a
+                      nenhuma fonte conhecida.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <h3>Primeiras Criaturas</h3>
+                    <p>
+                      As primeiras entidades atravessaram os Portais poucas
+                      horas depois de sua abertura.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- =================================================
+                     PRIMORDIAIS
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-dragon"></i>
+                  Os Primeiros Primordiais
+                </h2>
+                <p>
+                  As criaturas que emergiram dos Portais não eram simples
+                  animais. Possuíam estruturas físicas desconhecidas,
+                  capacidades sobrenaturais e uma resistência que tornava
+                  inúteis as armas convencionais.
+                </p>
+                <p>
+                  Os primeiros seres desse tipo receberam posteriormente o nome
+                  de
+                  <strong>Primordiais</strong>.
+                </p>
+                <p>
+                  Alguns pareciam controlar elementos. Outros demonstravam
+                  capacidades relacionadas às sombras, eletricidade, gelo ou
+                  força física extrema. Quanto mais os pesquisadores observavam
+                  essas criaturas, mais evidente se tornava uma possibilidade
+                  assustadora:
+                </p>
+                <div class="story-highlight">
+                  <i class="fas fa-question-circle"></i>
+                  <p>
+                    <strong>
+                      Os Primordiais não pareciam ter surgido por acaso. Eles
+                      pareciam pertencer àquele mundo.
+                    </strong>
+                  </p>
+                </div>
+              </section>
+              <!-- =================================================
+                     ERA DO COLAPSO
+                ================================================== -->
+              <div class="story-chapter">
+                <span>ERA DO COLAPSO</span>
+              </div>
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-city"></i>
+                  A Queda das Nações
+                </h2>
+                <p>
+                  As primeiras semanas foram marcadas pelo caos. Cidades
+                  inteiras foram evacuadas enquanto forças militares tentavam
+                  conter criaturas que pareciam ignorar as limitações das armas
+                  convencionais.
+                </p>
+                <div class="history-cards">
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Defesa</h3>
+                    <p>
+                      Exércitos foram mobilizados para proteger as principais
+                      cidades e impedir o avanço das criaturas.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-house-damage"></i>
+                    </div>
+                    <h3>Deslocamento</h3>
+                    <p>
+                      Milhões de pessoas abandonaram regiões próximas aos
+                      Portais.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Pesquisa</h3>
+                    <p>
+                      Cientistas começaram a estudar os corpos e a energia
+                      deixada pelas criaturas.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Reconstrução</h3>
+                    <p>
+                      As nações restantes começaram a construir zonas
+                      fortificadas ao redor das regiões consideradas seguras.
+                    </p>
+                  </div>
+                </div>
+                <div class="story-highlight">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <p>
+                    <strong>
+                      Em questão de semanas, 40% da população mundial foi
+                      deslocada. Os governos entraram em colapso.
+                    </strong>
+                  </p>
+                </div>
+              </section>
+              <!-- =================================================
+                     FRAGMENTOS
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-gem"></i>
+                  O Primeiro Fragmento
+                </h2>
+                <p>
+                  A primeira grande descoberta aconteceu após a derrota de um
+                  dos Primordiais.
+                </p>
+                <p>
+                  Quando o corpo da criatura começou a desaparecer, os soldados
+                  encontraram pequenos cristais espalhados pelo local.
+                  Diferentemente de qualquer mineral conhecido, os fragmentos
+                  continuavam liberando energia mesmo após a morte do
+                  Primordial.
+                </p>
+                <p>O fenômeno mudaria completamente o rumo da humanidade.</p>
+                <div class="history-cards">
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Fragmentos</h3>
+                    <p>
+                      Cristais formados a partir da energia residual dos
+                      Primordiais.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Forja</h3>
+                    <p>
+                      Artesãos descobriram que os Fragmentos podiam ser
+                      incorporados a armas e armaduras.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Alquimia</h3>
+                    <p>
+                      Pesquisadores desenvolveram métodos para utilizar a
+                      energia cristalizada em poções e experimentos.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- =================================================
+                     ASCENSÃO
+                ================================================== -->
+              <div class="story-chapter">
+                <span>ASCENSÃO</span>
+              </div>
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-crosshairs"></i>
+                  O Projeto Ascensão
+                </h2>
+                <p>
+                  Com os Fragmentos finalmente compreendidos, surgiu uma nova
+                  pergunta: se as criaturas podiam utilizar aquela energia,
+                  seria possível ensinar um humano a fazer o mesmo?
+                </p>
+                <p>
+                  Diversos projetos foram iniciados simultaneamente. A maioria
+                  terminou em fracasso. Alguns candidatos não suportavam a
+                  energia. Outros eram incapazes de controlar suas novas
+                  capacidades.
+                </p>
+                <p>
+                  Depois de anos de pesquisas, surgiu a primeira geração de
+                  humanos capazes de utilizar a energia dos Fragmentos de
+                  maneira controlada.
+                </p>
+                <div class="story-highlight">
+                  <i class="fas fa-crown"></i>
+                  <p>
+                    <strong>
+                      Os primeiros Caçadores não nasceram como heróis. Foram
+                      criados porque a humanidade precisava de uma resposta.
+                    </strong>
+                  </p>
+                </div>
+              </section>
+              <!-- =================================================
+                     CAÇADORES
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-users"></i>
+                  A Criação dos Caçadores
+                </h2>
+                <p>
+                  Face à iminente extinção, as nações remanescentes se uniram.
+                  Os melhores estrategistas militares, cientistas e atletas
+                  foram reunidos para um programa experimental de
+                  potencialização humana.
+                </p>
+                <p>
+                  Utilizando a tecnologia mais avançada disponível e,
+                  posteriormente, os próprios Fragmentos Cristalizados dos
+                  Primordiais derrotados, criou-se uma nova classe de
+                  guerreiros:
+                  <strong>Caçadores de Elite</strong>.
+                </p>
+                <p>
+                  Esses guerreiros receberam treinamento intensivo em combate,
+                  estratégia, resistência mental e domínio de habilidades
+                  sobrenaturais.
+                </p>
+                <p>
+                  Divididos em múltiplas Organizações, cada uma com sua própria
+                  filosofia de combate, eles se tornaram a última esperança da
+                  humanidade.
+                </p>
+              </section>
+              <!-- =================================================
+                     SISTEMA DE FRAGMENTOS
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-gem"></i>
+                  O Sistema dos Fragmentos
+                </h2>
+                <p>
+                  Após cada vitória contra um Primordial, algo notável acontece:
+                  o cadáver da entidade se desintegra em estruturas cristalinas
+                  chamadas de
+                  <strong>Fragmentos Cristalizados</strong>.
+                </p>
+                <p>
+                  Essas estruturas pulsam com energia residual do Primordial
+                  vencido e se tornaram a principal fonte de desenvolvimento
+                  tecnológico e militar da nova era.
+                </p>
+                <p>
+                  Os Fragmentos não são simplesmente recursos — eles são a chave
+                  para tudo.
+                </p>
+                <div class="story-timeline">
+                  <div class="timeline-item">
+                    <span class="timeline-date"> FASE I </span>
+                    <h4>Exploração</h4>
+                    <p>
+                      Caçadores entram em zonas perigosas para localizar e
+                      recuperar Fragmentos.
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="timeline-date"> FASE II </span>
+                    <h4>Processamento</h4>
+                    <p>
+                      Os Fragmentos são classificados, purificados e preparados
+                      para utilização.
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="timeline-date"> FASE III </span>
+                    <h4>Manufatura</h4>
+                    <p>
+                      Mestres artesãos transformam a energia cristalizada em
+                      armas, armaduras e equipamentos.
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="timeline-date"> FASE IV </span>
+                    <h4>Domínio</h4>
+                    <p>
+                      Caçadores experientes aprendem a utilizar equipamentos e
+                      técnicas cada vez mais avançadas.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- =================================================
+                     RANKINGS
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-chart-line"></i>
+                  O Sistema de Rankings
+                </h2>
+                <p>
+                  Com centenas de Caçadores em ação simultânea, era necessário
+                  estabelecer uma ordem. Nasceu o
+                  <strong>Sistema de Rankings Global</strong>.
+                </p>
+                <p>
+                  O sistema passou a classificar os Caçadores de Elite de acordo
+                  com seus feitos, experiência, capacidade de combate e
+                  conquistas registradas.
+                </p>
+                <p>
+                  O ranking deixou de ser apenas uma forma de comparação. Ele
+                  passou a definir o acesso a diferentes oportunidades dentro da
+                  nova sociedade.
+                </p>
+                <ul class="story-list">
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    Missões de recompensa maior
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    Equipamentos exclusivos
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    Territórios de caça privativos
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    Acesso a Raids de tier máximo
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    Influência dentro das organizações
+                  </li>
+                </ul>
+                <p>
+                  Atingir o rank
+                  <strong>Vortrya</strong>, o ápice da hierarquia, tornou-se o
+                  sonho de inúmeros Caçadores.
+                </p>
+              </section>
+              <!-- =================================================
+                     MUNDO
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-map"></i>
+                  O Mundo Após a Transformação
+                </h2>
+                <p>
+                  O planeta não é mais o que era. As regiões onde os Portais
+                  eclodiram se tornaram zonas de caça, enquanto antigas cidades
+                  deram lugar a fortalezas e centros especializados.
+                </p>
+                <p>
+                  Cada região desenvolveu características próprias de acordo com
+                  os Primordiais que nela habitavam.
+                </p>
+                <div class="world-regions">
+                  <div class="region-card">
+                    <h4>
+                      <i class="fas fa-snowflake"></i>
+                      Territórios Gelados do Norte
+                    </h4>
+                    <p>
+                      Onde Crystallis domina. Clima extremo, inimigos de gelo e
+                      Fragmentos de elemento congelante.
+                    </p>
+                  </div>
+                  <div class="region-card">
+                    <h4>
+                      <i class="fas fa-moon"></i>
+                      Florestas Obscuras do Oeste
+                    </h4>
+                    <p>
+                      Reduto de Umbravore. Sombras eternas, ilusões e perigos
+                      que desafiam a mente.
+                    </p>
+                  </div>
+                  <div class="region-card">
+                    <h4>
+                      <i class="fas fa-bolt"></i>
+                      Planaltos Relampejantes do Leste
+                    </h4>
+                    <p>
+                      Lar de Voltarex. Tempestades perpétuas e energia elétrica
+                      em cada superfície.
+                    </p>
+                  </div>
+                  <div class="region-card">
+                    <h4>
+                      <i class="fas fa-cog"></i>
+                      Ruínas Mecânicas do Sul
+                    </h4>
+                    <p>
+                      Onde Titanus Prime repousa. Tecnologia ancestral
+                      encontra-se com a natureza.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- =================================================
+                     ERA ATUAL
+                ================================================== -->
+              <div class="story-chapter">
+                <span>ERA DA ASCENSÃO</span>
+              </div>
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-star"></i>
+                  O Presente
+                </h2>
+                <p>
+                  Décadas se passaram desde a Grande Ruptura. A humanidade
+                  aprendeu a sobreviver, reconstruir e até prosperar dentro do
+                  novo mundo.
+                </p>
+                <p>
+                  Cidades foram reconstruídas ao redor de antigas fortalezas.
+                  Novas organizações surgiram. Os Caçadores passaram a ser
+                  classificados por experiência, poder e feitos registrados.
+                </p>
+                <p>
+                  Atualmente, novas técnicas de combate são desenvolvidas
+                  constantemente e o conhecimento sobre os Primordiais continua
+                  crescendo.
+                </p>
+                <p>
+                  Porém, sinais perturbadores começaram a aparecer. Os Portais
+                  ainda pulsam.
+                </p>
+                <div class="story-highlight">
+                  <i class="fas fa-eye"></i>
+                  <p>
+                    <strong>
+                      E existe uma pergunta que nenhum pesquisador conseguiu
+                      responder: quem abriu a primeira Porta?
+                    </strong>
+                  </p>
+                </div>
+              </section>
+              <!-- =================================================
+                     MISTÉRIOS
+                ================================================== -->
+              <section class="story-section">
+                <h2>
+                  <i class="fas fa-question-circle"></i>
+                  Os Mistérios que Permanecem
+                </h2>
+                <p>
+                  Mesmo após décadas de pesquisas, os Portais continuam
+                  escondendo perguntas que nenhuma organização conseguiu
+                  responder completamente.
+                </p>
+                <div class="history-cards">
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3>A Origem dos Portais</h3>
+                    <p>
+                      Ninguém sabe quem os criou ou por que começaram a
+                      aparecer.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Os Primordiais</h3>
+                    <p>
+                      Ainda existem criaturas cuja verdadeira origem permanece
+                      desconhecida.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Além dos Portais</h3>
+                    <p>
+                      Alguns pesquisadores acreditam que os Portais conectam o
+                      mundo a camadas desconhecidas da realidade.
+                    </p>
+                  </div>
+                  <div class="history-card">
+                    <div class="card-icon">
+                      <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>O Desconhecido</h3>
+                    <p>
+                      Existem regiões que nenhum Caçador conseguiu explorar
+                      completamente e retornar para descrever.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </article>
+            <!-- =====================================================
+                 FINAL
+            ====================================================== -->
+            <div class="story-future">
+              <h4>O Futuro Ainda Não Foi Escrito</h4>
+              <p>
+                Os registros conhecidos contam apenas aquilo que a humanidade
+                conseguiu descobrir até agora.
+              </p>
+              <p>
+                Novos Portais continuam surgindo. Novos Primordiais podem estar
+                esperando do outro lado. E existem regiões do mundo que nenhum
+                Caçador retornou para descrever.
+              </p>
+              <p>
+                <strong> A história de Vortrya continua sendo escrita. </strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <footer class="footer-index">
-      <div class="footer-bottom">
-        <p>&copy; 2026 Vortrya - Todos os direitos reservados.</p>
-      </div>
-    </footer>
-
-    <script defer="" src="js/wiki-pages.js"></script>
-    <script defer="True" src="js/vortrya.js"></script>
+    <script defer src="js/wiki-pages.js"></script>
+    <script defer src="js/vortrya.js"></script>
   </body>
 </html>

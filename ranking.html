@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="pt-BR">
-  <title>Vortrya Rankings</title>
-
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/avortrya.css" />
-    <link href="css/wiki-pages.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/rankings.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-
-  <body class="wiki-page" data-page="atributos">
-    <nav class="navbar">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings | Vortrya Wiki</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- CSS COMPARTILHADOS -->
+    <link href="css/avortrya.css" rel="stylesheet">
+    
+    <link href="css/wiki-pages.css" rel="stylesheet">
+    <!-- VISUAL COMPARTILHADO DAS CINCO PÁGINAS -->
+    <link href="css/sistemas.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/revisao.css">
+</head>
+  <body class="wiki-page" data-page="ranking">
+<nav class="navbar" aria-label="Navegação principal">
       <div class="nav-container">
         <a class="logo" href="index.html">
           <span class="logo-title"> VORTRYA </span>
@@ -42,7 +43,7 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="historia.html"> História </a>
+                <a href="index.html#historia"> História </a>
               </li>
               <li>
                 <a href="gameplay.html"> Gameplay </a>
@@ -65,13 +66,7 @@
                 <a href="atributos.html"> Atributos </a>
               </li>
               <li>
-                <a href="equipamentos.html"> Equipamentos </a>
-              </li>
-              <li>
                 <a href="itens.html"> Itens </a>
-              </li>
-              <li>
-                <a href="crafting.html"> Crafting </a>
               </li>
             </ul>
           </li>
@@ -163,69 +158,14 @@
       </div>
     </nav>
 
-    <h2>Rankings</h2>
+    <!-- CONTEÚDO E INTERAÇÕES: RANKING -->
+    <main class="systems-page" data-sp-page="ranking">
+<header class="sp-hero"><div><span class="sp-kicker">VORTRYA / HIERARQUIA</span><h1>Rankings</h1><p>Conheça os ranks dos Caçadores e consulte cada posição da hierarquia.</p></div><span class="sp-hero-symbol" aria-hidden="true">♛</span></header><section class="sp-panel"><div class="sp-section-heading"><h2>Do início ao ápice</h2><p class="sp-note">Selecione um rank para consultar.</p></div><div class="sp-rank-grid"><!-- RANK: VORTRYA --><button type="button" class="sp-rank-card sp-rank-gold" data-sp-rank="Vortrya" data-sp-rank-description="Elite absoluta" aria-pressed="true"><span aria-hidden="true">♛</span><strong>Vortrya</strong><small>Elite absoluta</small></button><!-- RANK: TITÃ --><button type="button" class="sp-rank-card sp-rank-purple" data-sp-rank="Titã" data-sp-rank-description="Mestres veteranos" aria-pressed="false"><span aria-hidden="true">◆</span><strong>Titã</strong><small>Mestres veteranos</small></button><!-- RANK: SOBERANO --><button type="button" class="sp-rank-card sp-rank-blue" data-sp-rank="Soberano" data-sp-rank-description="Caçadores experientes" aria-pressed="false"><span aria-hidden="true">◈</span><strong>Soberano</strong><small>Caçadores experientes</small></button><!-- RANK: VANGUARDA --><button type="button" class="sp-rank-card sp-rank-green" data-sp-rank="Vanguarda" data-sp-rank-description="Ascensão competitiva" aria-pressed="false"><span aria-hidden="true">↑</span><strong>Vanguarda</strong><small>Ascensão competitiva</small></button><!-- RANK: INICIANTE --><button type="button" class="sp-rank-card sp-rank-gray" data-sp-rank="Iniciante" data-sp-rank-description="Novos Caçadores" aria-pressed="false"><span aria-hidden="true">◇</span><strong>Iniciante</strong><small>Novos Caçadores</small></button></div><section class="sp-rank-detail" aria-live="polite"><span class="sp-kicker">RANK SELECIONADO</span><h2 id="sp-rank-name">Vortrya</h2><p id="sp-rank-description">Elite absoluta</p><p class="sp-note">Requisitos e recompensas de cada rank ainda não foram cadastrados.</p></section></section>
+    </main>
 
-    <section class="ranking-container">
-      <div class="ranking-card Vortrya">
-        <h2>Vortrya</h2>
-        <p>Elite absoluta</p>
-      </div>
-
-      <div class="ranking-card titan">
-        <h2>Titã</h2>
-        <p>Mestres veteranos</p>
-      </div>
-
-      <div class="ranking-card soberano">
-        <h2>Soberano</h2>
-        <p>Caçadores experientes</p>
-      </div>
-
-      <div class="ranking-card vanguarda">
-        <h2>Vanguarda</h2>
-        <p>Ascensão competitiva</p>
-      </div>
-
-      <div class="ranking-card iniciante">
-        <h2>Iniciante</h2>
-        <p>Novos Caçadores</p>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>Vortrya</h4>
-            <p>O maior RPG de ação cooperativo já criado.</p>
-          </div>
-          <div class="footer-section">
-            <h4>Links Rápidos</h4>
-            <ul>
-              <li><a href="historia.html">História</a></li>
-              <li><a href="gameplay.html">Gameplay</a></li>
-              <li><a href="bosses.html">Bosses</a></li>
-              <li><a href="raids.html">Raids</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Comunidade</h4>
-            <ul>
-              <li><a href="https://discord.gg/6hbDmapzbu">Discord</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">YouTube</a></li>
-              <li><a href="#">Twitch</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Vortrya - Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </footer>
-
-    <script defer="" src="js/wiki-pages.js"></script>
-    <script defer="True" src="js/vortrya.js"></script>
+    <!-- JAVASCRIPT COMPARTILHADO -->
+    <script defer src="js/wiki-pages.js"></script>
+    <script defer src="js/vortrya.js"></script>
+    <script defer src="js/sistemas.js"></script>
   </body>
 </html>

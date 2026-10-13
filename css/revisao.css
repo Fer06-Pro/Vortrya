@@ -1,0 +1,73 @@
+/* Ajustes de leitura e responsividade, sem alterar a identidade do jogo. */
+html { scroll-padding-top: 145px; }
+body.wiki-page:not(.home) { background-image: linear-gradient(rgba(7,11,24,.82),rgba(7,11,24,.92)),url('../imagens/mapa-vortrya.webp'); }
+body.wiki-page main { min-width: 0; }
+body.wiki-page .wiki-main { width: min(1180px,100%); margin-inline: auto; padding: 40px 24px 70px; }
+body.wiki-page .wiki-main .wiki-card p, body.wiki-page .wiki-main .wiki-detail p { font-size: 15px; line-height: 1.8; text-align: left; }
+body.wiki-page .wiki-heading p { font-size: 16px; }
+body.wiki-page .bosses-hero, body.wiki-page .faq-hero { background: rgba(7,11,24,.88); padding: 34px 24px; border-radius: 12px; }
+body.wiki-page .bosses-hero h1, body.wiki-page .faq-hero h1 { font-size: clamp(30px,5vw,54px); line-height: 1.2; }
+body.wiki-page .bosses-hero p, body.wiki-page .faq-hero p { color: #ddd8cb; font-size: 16px; }
+body.wiki-page .boss-card { background: #0c1222; }
+body.wiki-page .boss-card h3 { margin-top: 8px; font-size: 21px; }
+body.wiki-page .boss-description { color: #c8c5bd; font-size: 14px; }
+body.wiki-page .boss-hero-content { max-width: 720px; }
+body.wiki-page .boss-hero h1 { font-size: clamp(28px,4.3vw,54px); letter-spacing: 1px; line-height: 1.15; word-break: normal; overflow-wrap: normal; }
+body.wiki-page .boss-hero h2 { display: block; border: 0; margin: 16px 0; }
+body.wiki-page .boss-hero-content p { text-align: left; }
+body.wiki-page .boss-panel p, body.wiki-page .phase p { font-size: 14px; color: #c8c5bd; }
+body.wiki-page .boss-tags, body.wiki-page .boss-actions { flex-wrap: wrap; }
+body.wiki-page .faq-question { font-size: 16px; }
+body.wiki-page .faq-answer p { font-size: 15px; line-height: 1.8; }
+body.wiki-page .faq-item[hidden], body.wiki-page [hidden] { display: none !important; }
+body.wiki-page .wiki-main .wiki-card h3 { color: #f0c75e; }
+body.home .home-main > .mapa-container { height: auto; min-height: 0; aspect-ratio: 1671 / 941; background-size: 100% 100%; }
+body.home .mapa-container .map-button { width: 15%; }
+body.home .mapa-container .map-button img { width: 100%; height: auto; }
+body.home .home-main .home-map-shortcuts { display: none; }
+.home-story .page-hero { scroll-margin-top: 150px; }
+body.wiki-page .skill-node { min-height: 88px; padding: 18px; }
+body.wiki-page .skill-node strong { display: block; font-size: 15px; }
+body.wiki-page .skill-node small { font-size: 13px; }
+body.wiki-page .catalog-panel > p { text-align: left; }
+body.wiki-page .wiki-grid, body.wiki-page .catalog-page .wiki-grid { min-width: 0; }
+body.wiki-page .development-page { min-height: 50vh; }
+@media (max-width: 1000px) {
+ body.wiki-page .boss-page { grid-template-columns: 1fr; }
+ body.wiki-page .boss-sidebar { position: static; top: auto; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+ body.wiki-page .boss-sidebar-title, body.wiki-page .boss-all { grid-column: 1/-1; }
+ body.wiki-page .boss-nav-item { min-width: 0; }
+ body.wiki-page .boss-nav-item small { display: none; }
+ body.wiki-page .boss-info-grid, body.wiki-page .boss-bottom-grid { grid-template-columns: 1fr; }
+ body.wiki-page .phases-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+ body.wiki-page .wiki-main { padding: 28px 16px 50px; }
+ body.wiki-page .wiki-grid, body.wiki-page .catalog-page .wiki-grid { grid-template-columns: 1fr; }
+ body.wiki-page .bosses-page, body.wiki-page .faq-page { padding: 30px 16px 50px; width: 100%; }
+ body.wiki-page .bosses-grid { grid-template-columns: 1fr; }
+ body.wiki-page .boss-page { width: calc(100% - 32px); margin: 24px auto 50px; }
+ body.wiki-page .boss-hero-content { padding: 30px 20px; }
+ body.wiki-page .boss-hero h1 { font-size: 30px; letter-spacing: 0; }
+ body.wiki-page .boss-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ body.wiki-page .boss-stat { min-width: 0; padding: 12px; }
+ body.wiki-page .boss-stat strong { overflow-wrap: anywhere; }
+ body.wiki-page .boss-sidebar { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ body.wiki-page .boss-nav-item { gap: 6px; }
+ body.wiki-page .boss-nav-item strong { font-size: 12px; }
+ body.wiki-page .boss-nav-item img { width: 30px; height: 30px; }
+ body.wiki-page .boss-panel, body.wiki-page .boss-phases { padding: 20px; }
+ body.wiki-page .faq-question { padding: 17px; }
+ body.wiki-page .faq-contact { flex-wrap: wrap; }
+ body.wiki-page .reward-list { grid-template-columns: 1fr; }
+ body.home .home-main .home-map-shortcuts { display: flex; flex-wrap: wrap; gap: 10px; padding: 18px 16px; background: #0c1222; }
+ body.home .home-map-shortcuts a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid #8f6b1f; border-radius: 6px; color: #f0c75e; font-size: 14px; }
+ body.home .home-story .page-content { padding: 28px 16px; }
+ body.home .home-story .page-content .container { padding: 0; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+:root { --container: var(--container-width,1400px); --gradient-1: var(--gradient-gold); }
+body.wiki-page main p { text-align: left; text-justify: auto; }
+body.wiki-page .boss-page { padding: 0; }
+body.home .home-story .page-hero-content p { text-align: center; color: #d8d5cc; }
+body.home .home-story .page-hero-content h1 { color: #f0c75e; }

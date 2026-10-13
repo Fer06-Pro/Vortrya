@@ -1,0 +1,57 @@
+/* ITENS, EQUIPAMENTOS E CRAFTING — complemento ao wiki-pages.css */
+.catalog-page [hidden] { display: none !important; }
+.catalog-page .catalog-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0;
+}
+.catalog-tabs a {
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 215, 0, .25);
+  border-radius: 8px;
+  background: rgba(10, 14, 28, .85);
+  color: #e0e3eb;
+  text-decoration: none;
+}
+.catalog-tabs a[aria-selected="true"] {
+  color: #ffd700;
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, .1);
+}
+.catalog-page a:focus-visible, .catalog-page select:focus-visible,
+.catalog-page input:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 4px;
+}
+.catalog-panel { scroll-margin-top: 110px; }
+.catalog-panel > h2, .catalog-panel > p { margin-bottom: 20px; }
+.catalog-page .wiki-card { overflow-wrap: anywhere; }
+.catalog-page .catalog-card-title { margin: 0 0 12px; }
+.catalog-page .catalog-card-cost { margin-top: 12px; }
+.catalog-page .catalog-card-action { display: inline-block; margin-top: 12px; }
+.catalog-page #catalog-recipe {
+  display: block;
+  width: min(100%, 460px);
+  padding: 12px;
+  margin: 10px 0 18px;
+  border: 1px solid rgba(255, 215, 0, .3);
+  border-radius: 6px;
+  background: #0b1020;
+  color: #e0e3eb;
+  font: inherit;
+}
+.catalog-page #catalog-materials { display: grid; gap: 12px; margin-bottom: 18px; }
+.catalog-page .catalog-material {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d1d5df;
+}
+.catalog-page .catalog-material input { width: 18px; height: 18px; accent-color: #ffd700; }
+.catalog-page .catalog-simulator { margin-top: 28px; }
+@media (max-width: 768px) {
+  .catalog-page { padding-inline: 20px; }
+  .catalog-page .wiki-grid { grid-template-columns: 1fr; }
+  .catalog-tabs a { flex: 1; text-align: center; padding: 12px; }
+}

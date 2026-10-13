@@ -2,21 +2,23 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Itens e Equipamentos | Vortrya Wiki</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itens, Equipamentos e Crafting | Vortrya Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="css/avortrya.css" rel="stylesheet" />
-    <link href="css/navbar.css" rel="stylesheet" />
-    <link href="css/footer.css" rel="stylesheet" />
-    <link href="css/wiki-pages.css" rel="stylesheet" />
-  </head>
+    <link rel="stylesheet" href="css/avortrya.css" />
+    
+    <link rel="stylesheet" href="css/wiki-pages.css" />
+    <link rel="stylesheet" href="css/itens.css" />
+    <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/revisao.css">
+</head>
   <body class="wiki-page" data-page="itens">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegação principal">
       <div class="nav-container">
         <a class="logo" href="index.html">
           <span class="logo-title"> VORTRYA </span>
@@ -42,7 +44,7 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="historia.html"> História </a>
+                <a href="index.html#historia"> História </a>
               </li>
               <li>
                 <a href="gameplay.html"> Gameplay </a>
@@ -65,13 +67,7 @@
                 <a href="atributos.html"> Atributos </a>
               </li>
               <li>
-                <a href="equipamentos.html"> Equipamentos </a>
-              </li>
-              <li>
                 <a href="itens.html"> Itens </a>
-              </li>
-              <li>
-                <a href="crafting.html"> Crafting </a>
               </li>
             </ul>
           </li>
@@ -162,61 +158,126 @@
         </div>
       </div>
     </nav>
-    <main class="wiki-main">
+    <main class="wiki-main catalog-page">
+      <!-- CABEÇALHO COMPARTILHADO -->
       <div class="wiki-heading">
-        <span class="wiki-kicker"> VORTRYA • ARQUIVO EM DESENVOLVIMENTO </span>
+        <span class="wiki-kicker">VORTRYA • ARQUIVO EM DESENVOLVIMENTO</span>
         <div aria-hidden="true" class="wiki-icon">⚔</div>
-        <h1>Itens e Equipamentos</h1>
-        <p>Protótipos de armas e recursos para os primeiros aventureiros.</p>
-        <span class="draft-tag"> Rascunho v0.1 — conceitos não oficiais </span>
-      </div>
-      <div class="wiki-grid">
-        <article class="wiki-card">
-          <h3>Arco de Freixo</h3>
-          <p>
-            3× madeira flexível · 2× fibras resistentes · 1× corda simples.
-            Flechas: 1× madeira fina + 1× pedra lascada.
-          </p>
-        </article>
-        <article class="wiki-card">
-          <h3>Lança de Vigia</h3>
-          <p>2× madeira rígida · 2× minério bruto · 1× tira de couro.</p>
-        </article>
-        <article class="wiki-card">
-          <h3>Espada de Ferro Cru</h3>
-          <p>4× minério de ferro · 1× madeira para cabo · 2× tiras de couro.</p>
-        </article>
-        <article class="wiki-card">
-          <h3>Foice da Colheita</h3>
-          <p>3× minério de ferro · 2× madeira · 1× fibra reforçada.</p>
-        </article>
-      </div>
-      <section class="wiki-detail">
-        <h2>Materiais de entrada</h2>
+        <h1>Itens, Equipamentos e Crafting</h1>
         <p>
-          Madeira, fibras, cordas, couro, pedra lascada e minério bruto são
-          exemplos provisórios. Os custos serão balanceados quando o sistema de
-          coleta existir.
+          Consulte armas e recursos, conheça equipamentos e simule receitas.
         </p>
-        <a class="wiki-link" href="crafting.html"> Simular uma receita → </a>
+        <span class="draft-tag">Rascunho v0.1 — conceitos não oficiais</span>
+      </div>
+
+      <!-- ABAS: LINKS TAMBÉM FUNCIONAM SEM JAVASCRIPT -->
+      <nav class="catalog-tabs" aria-label="Seções do catálogo">
+        <a id="tab-itens" href="#itens">Itens</a>
+        <a id="tab-equipamentos" href="#equipamentos">Equipamentos</a>
+        <a id="tab-crafting" href="#crafting">Crafting</a>
+      </nav>
+
+      <!-- ITENS: CARDS GERADOS A PARTIR DOS CADASTROS EM js/itens.js -->
+      <section id="itens" class="catalog-panel" aria-labelledby="heading-itens">
+        <h2 id="heading-itens">Itens</h2>
+        <p>Protótipos de armas e recursos para os primeiros aventureiros.</p>
+        <div class="wiki-grid" id="catalog-items"></div>
+        <noscript
+          ><p>
+            Ative o JavaScript para consultar os cards e as receitas do
+            catálogo.
+          </p></noscript
+        >
+        <section class="wiki-detail">
+          <h3>Materiais de entrada</h3>
+          <p>
+            Madeira, fibras, cordas, couro, pedra lascada e minério bruto são
+            exemplos provisórios. Os custos serão balanceados quando o sistema
+            de coleta existir.
+          </p>
+          <a class="wiki-link" href="#crafting">Simular uma receita →</a>
+        </section>
       </section>
+
+      <!-- EQUIPAMENTOS: DESCRIÇÕES PRESERVADAS -->
+      <section
+        id="equipamentos"
+        class="catalog-panel"
+        aria-labelledby="heading-equipamentos"
+      >
+        <h2 id="heading-equipamentos">Equipamentos</h2>
+        <p>
+          Os Equipamentos representam uma das principais formas de evolução dos
+          Caçadores. Cada item possui atributos próprios, níveis de raridade e
+          funções específicas durante o combate.
+        </p>
+        <div class="wiki-grid" id="catalog-equipment"></div>
+      </section>
+
+      <!-- CRAFTING: ETAPAS E SIMULADOR COMPARTILHADO -->
+      <section
+        id="crafting"
+        class="catalog-panel"
+        aria-labelledby="heading-crafting"
+      >
+        <h2 id="heading-crafting">Forja e Crafting</h2>
+        <p>Transforme recursos em ferramentas e equipamentos.</p>
+        <div class="wiki-grid">
+          <!-- ETAPA: COLETA -->
+          <article class="wiki-card">
+            <h3>Coleta</h3>
+            <p>Encontre madeira, minério, fibras e outros recursos no mundo.</p>
+          </article>
+          <!-- ETAPA: PREPARAÇÃO -->
+          <article class="wiki-card">
+            <h3>Preparação</h3>
+            <p>
+              Refine os materiais em estações apropriadas, quando necessário.
+            </p>
+          </article>
+          <!-- ETAPA: RECEITA -->
+          <article class="wiki-card">
+            <h3>Receita</h3>
+            <p>Escolha um projeto e confira quantidades e requisitos.</p>
+          </article>
+          <!-- ETAPA: CRIAÇÃO -->
+          <article class="wiki-card">
+            <h3>Criação</h3>
+            <p>
+              Consuma materiais para produzir o item. A simulação abaixo ainda
+              não salva inventário.
+            </p>
+          </article>
+        </div>
+        <section class="wiki-detail catalog-simulator">
+          <h3>Simulador de materiais</h3>
+          <p class="wiki-note">
+            Marque os recursos que você possui. Este teste não representa um
+            inventário real.
+          </p>
+          <label class="wiki-label" for="catalog-recipe">Receita</label>
+          <select id="catalog-recipe"></select>
+          <div class="materials" id="catalog-materials"></div>
+          <div
+            aria-live="polite"
+            role="status"
+            class="wiki-detail"
+            id="catalog-craft-result"
+          ></div>
+        </section>
+      </section>
+
+      <!-- NAVEGAÇÃO COMPARTILHADA -->
       <nav aria-label="Outras seções" class="wiki-bottom-nav">
-        <a href="guia.html"> Guia </a>
-        <a href="atributos.html"> Atributos </a>
-        <a href="itens.html"> Itens </a>
-        <a href="crafting.html"> Forja </a>
-        <a href="inimigos.html"> Inimigos </a>
-        <a href="regioes.html"> Regiões </a>
-        <a href="faccoes.html"> Facções </a>
-        <a href="missoes.html"> Missões </a>
+        <a href="guia.html">Guia</a><a href="atributos.html">Atributos</a>
+        <a href="#itens">Itens</a><a href="#equipamentos">Equipamentos</a
+        ><a href="#crafting">Forja</a> <a href="inimigos.html">Inimigos</a
+        ><a href="regioes.html">Regiões</a> <a href="faccoes.html">Facções</a
+        ><a href="missoes.html">Missões</a>
       </nav>
     </main>
-    <footer class="footer-index">
-      <div class="footer-bottom">
-        <p>© 2026 Vortrya - Todos os direitos reservados.</p>
-      </div>
-    </footer>
-    <script defer="" src="js/wiki-pages.js"></script>
-    <script defer="True" src="js/vortrya.js"></script>
+    <script defer src="js/wiki-pages.js"></script>
+    <script defer src="js/vortrya.js"></script>
+    <script defer src="js/itens.js"></script>
   </body>
 </html>

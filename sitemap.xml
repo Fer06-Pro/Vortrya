@@ -1,22 +1,24 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://fer06-pro.github.io/Vortrya/</loc>
-  </url>
-  <url>
-    <loc>https://fer06-pro.github.io/Vortrya/guia.html</loc>
-  </url>
-  <url>
-    <loc>https://fer06-pro.github.io/Vortrya/atributos.html</loc>
-  </url>
-  <url>
-    <loc>https://fer06-pro.github.io/Vortrya/itens.html</loc>
-  </url>
-  <url>
-    <loc>https://fer06-pro.github.io/Vortrya/crafting.html</loc>
-  </url>
-  <url>
-    <loc>https://fer06-pro.github.io/Vortrya/inimigos.html</loc>
-  </url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/atributos.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/bosses.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/classes.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/economia.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/faccoes.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/faq.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/gameplay.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/guia.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/inimigos.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/itens.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/missoes.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/raids.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/ranking.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/regioes.html</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/boss.html?id=voltarex</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/boss.html?id=crystallis</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/boss.html?id=umbravore</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/boss.html?id=titanusprime</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/boss.html?id=ionizal</loc></url>
+  <url><loc>https://fer06-pro.github.io/Vortrya/boss.html?id=abyssion</loc></url>
 </urlset>

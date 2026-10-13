@@ -1,384 +1,46 @@
-/* CONTAINER */
-
-.nav-container {
-  width: 100%;
-  max-width: none;
-  height: 100%;
-
-  margin: 0;
-  padding: 0 3% 0 9%;
-
-  box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+/* Navbar única para toda a wiki. */
+body.wiki-page > .navbar { position: sticky; top: 0; z-index: 1000; width: 100%; height: auto; min-height: 76px; flex-shrink: 0; isolation: isolate; background: rgba(7,11,24,.97); border-bottom: 1px solid rgba(212,175,55,.3); box-shadow: 0 4px 22px #0005; }
+body.wiki-page > .navbar::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url('../imagens/Navbar.webp') center/cover no-repeat; opacity: .13; }
+body.wiki-page .nav-container { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 18px; width: min(1560px,100%); min-width: 0; min-height: 76px; padding: 12px 24px; margin: auto; }
+body.wiki-page .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; white-space: nowrap; text-decoration: none; }
+body.wiki-page .logo-title { font-family: 'Cinzel',serif; font-size: 24px; font-weight: 700; letter-spacing: 1px; color: #f0c75e; }
+body.wiki-page .logo-subtitle { font-family: 'Cinzel',serif; font-size: 13px; color: #c8b386; border-left: 1px solid #8f6b1f; padding-left: 12px; }
+body.wiki-page .nav-menu { display: flex; align-items: center; gap: 2px; flex-wrap: nowrap; margin: 0 0 0 auto; padding: 0; list-style: none; }
+body.wiki-page .nav-menu > li { position: relative; flex-shrink: 0; }
+body.wiki-page .nav-menu > li > a, body.wiki-page .nav-drop-toggle { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 9px; font-family: 'Inter',sans-serif; font-size: 14px; font-weight: 500; line-height: 1.3; white-space: nowrap; text-decoration: none; background: transparent; border: 0; color: #ddd3bb; cursor: pointer; }
+body.wiki-page .nav-menu a:hover, body.wiki-page .nav-drop-toggle:hover, body.wiki-page .nav-drop-toggle[aria-expanded='true'], body.wiki-page .nav-menu a.active, body.wiki-page .nav-menu > li.active > .nav-drop-toggle { color: #f0c75e; }
+body.wiki-page .nav-menu > li.active::after { content: ''; position: absolute; bottom: 2px; left: 9px; right: 9px; height: 2px; background: #d4af37; }
+body.wiki-page .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; width: max-content; min-width: 215px; max-width: 300px; list-style: none; margin: 0; padding: 8px; border: 1px solid #8f6b1f; border-radius: 8px; background: #0b101c; box-shadow: 0 15px 35px #0008; z-index: 1010; }
+body.wiki-page .dropdown.is-open > .dropdown-menu { display: block; }
+body.wiki-page .dropdown-menu a { display: block; padding: 12px; font: 14px/1.4 'Inter',sans-serif; color: #ddd3bb; border-radius: 5px; }
+body.wiki-page .dropdown-menu a:hover, body.wiki-page .dropdown-menu a.active { background: #d4af3715; }
+body.wiki-page .nav-search { position: relative; width: 210px; min-width: 0; flex: 0 0 210px; height: 42px; border: 1px solid #8f6b1f; border-radius: 7px; background: #080d18; }
+body.wiki-page .nav-search input { width: 100%; min-width: 0; height: 100%; padding: 0 12px; background: transparent; border: 0; color: #f3f0e8; font: 14px 'Inter',sans-serif; }
+body.wiki-page .nav-search input::placeholder { color: #b4ac9c; }
+body.wiki-page .nav-search-results { position: absolute; top: calc(100% + 8px); right: 0; width: min(370px,calc(100vw - 32px)); max-height: 60vh; overflow: auto; padding: 8px; border: 1px solid #8f6b1f; border-radius: 8px; background: #0b101c; box-shadow: 0 16px 35px #0008; }
+body.wiki-page .nav-search-results a { display: block; padding: 12px; border-radius: 5px; color: #f0c75e; font-size: 14px; }
+body.wiki-page .nav-search-results a:hover { background: #d4af3715; }
+body.wiki-page .nav-search-results small { display: block; color: #b4ac9c; font-size: 12px; }
+body.wiki-page .nav-search-results p { margin: 0; padding: 12px; font-size: 14px; }
+body.wiki-page .nav-search-results[hidden] { display: none !important; }
+body.wiki-page .wiki-menu-toggle { display: none; flex-shrink: 0; min-width: 44px; height: 44px; padding: 0 12px; margin: 0; border: 1px solid #8f6b1f; border-radius: 6px; background: #0c1222; color: #f0c75e; font-size: 23px; cursor: pointer; }
+body.wiki-page .navbar :is(a,button,input):focus-visible { outline: 2px solid #f0c75e; outline-offset: 3px; }
+@media (max-width: 1320px) {
+ body.wiki-page .nav-container { flex-wrap: wrap; gap: 12px; }
+ body.wiki-page .wiki-menu-toggle { display: block; margin-left: auto; order: 2; }
+ body.wiki-page .nav-search { order: 1; margin-left: auto; }
+ body.wiki-page .nav-menu { display: none; order: 3; flex: 0 0 100%; width: 100%; flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: 8px 0; max-height: 65vh; overflow-y: auto; }
+ body.wiki-page .nav-menu.is-open { display: flex; }
+ body.wiki-page .nav-menu > li { width: 100%; }
+ body.wiki-page .nav-menu > li > a, body.wiki-page .nav-drop-toggle { width: 100%; justify-content: space-between; padding: 13px 12px; font-size: 15px; }
+ body.wiki-page .dropdown-menu { position: static; width: 100%; min-width: 0; max-width: none; padding: 4px 10px; margin: 0; box-shadow: none; border: 0; border-left: 2px solid #8f6b1f; border-radius: 0; }
+ body.wiki-page .nav-menu > li.active::after { display: none; }
 }
-
-/* LOGO */
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  flex-shrink: 0;
-
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.logo-title {
-  font-family: "Cinzel", serif;
-  font-size: clamp(1.3rem, 2vw, 2.2rem);
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  color: #e7c78d;
-  text-shadow: 0 2px 8px #000;
-}
-
-.logo-subtitle {
-  font-family: "Cinzel", serif;
-  font-size: 1.1rem;
-  color: #d9b879;
-
-  border-left: 1px solid #594523;
-  padding-left: 20px;
-}
-
-/* MENU PRINCIPAL */
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
-
-  gap: clamp(2px, 0.5vw, 12px);
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-menu > li {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.nav-menu > li > a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  padding: 12px clamp(5px, 0.65vw, 14px);
-
-  font-family: "Cinzel", serif;
-  font-size: clamp(0.65rem, 0.85vw, 0.95rem);
-
-  color: #e2c99b;
-  text-decoration: none;
-  white-space: nowrap;
-
-  background: transparent;
-  transition: color 0.3s ease;
-}
-
-.nav-menu > li > a:hover {
-  color: #ffd978;
-  background: transparent;
-  text-shadow: 0 0 12px #c99738;
-}
-
-/* ITEM ATIVO */
-
-.nav-menu > li.active > a {
-  color: #ffd978;
-}
-
-.nav-menu > li.active > a::after {
-  content: "";
-  position: absolute;
-
-  bottom: 0;
-  left: 15%;
-  right: 15%;
-
-  height: 2px;
-  background: #e9bd63;
-  box-shadow: 0 0 10px #e9bd63;
-}
-
-/* DROPDOWN */
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  min-width: 210px;
-  padding: 10px;
-
-  background: rgba(8, 7, 5, 0.97);
-  border: 1px solid #88662f;
-  border-radius: 4px;
-
-  box-shadow: 0 12px 30px #000a;
-
-  display: none;
-  list-style: none;
-  z-index: 1100;
-}
-
-.dropdown:hover > .dropdown-menu,
-.dropdown:focus-within > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 11px 14px;
-
-  font-family: "Cinzel", serif;
-  font-size: 0.8rem;
-
-  color: #d9bf90;
-  text-decoration: none;
-
-  transition: 0.25s;
-}
-
-.dropdown-menu li a:hover {
-  color: #ffdb86;
-  background: rgba(180, 128, 42, 0.12);
-}
-
-/* TELAS MENORES */
-
-@media (max-width: 1250px) {
-  .nav-container {
-    padding-left: 7%;
-    gap: 10px;
-  }
-
-  .logo-subtitle {
-    display: none;
-  }
-
-  .nav-menu > li > a {
-    font-size: 0.7rem;
-    padding: 10px 5px;
-  }
-}
-
-/* ===== PESQUISA GLOBAL ===== */
-
-.nav-search {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.nav-search input {
-  width: 100%;
-  min-width: 0;
-  color: #f0d69a;
-}
-
-.nav-search input::placeholder {
-  color: #9d8b6e;
-}
-
-.search-results {
-  display: none;
-
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-
-  width: min(350px, 90vw);
-  max-height: 350px;
-  overflow-y: auto;
-
-  background: rgba(7, 10, 18, 0.98);
-  border: 1px solid var(--border-gold);
-  border-radius: 8px;
-
-  box-shadow: var(--shadow-large);
-  z-index: 2000;
-}
-
-.search-results.active,
-.search-results.show {
-  display: block;
-}
-
-.search-results a {
-  display: block;
-  padding: 12px 16px;
-
-  color: var(--text-light);
-  text-decoration: none;
-
-  border-bottom: 1px solid var(--border-light);
-  transition: background 0.2s ease;
-}
-
-.search-results a:hover {
-  color: var(--gold-light);
-  background: var(--gold-soft);
-}
-
-.search-results a:last-child {
-  border-bottom: none;
-}
-
-/* NAVBAR — AJUSTE DE ESPAÇAMENTO */
-
-.nav-container {
-  padding-left: 9%;
-  padding-right: 2%;
-  gap: 12px;
-}
-
-.nav-menu {
-  gap: 2px;
-  margin-left: auto;
-}
-
-.nav-menu > li > a {
-  font-size: clamp(0.68rem, 0.75vw, 0.85rem);
-  padding: 10px 6px;
-}
-
-.nav-search {
-  width: 190px;
-  min-width: 150px;
-  flex-shrink: 0;
-}
-
-.nav-search input {
-  background: transparent;
-  border: none;
-  outline: none;
-}
-
-/* ==========================================
-   NAVBAR — FUNDO SEMITRANSPARENTE
-========================================== */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  isolation: isolate;
-  background-image: none;
-}
-
-/* Imagem de fundo com transparência */
-.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image: url("../imagens/Navbar.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
-
-  opacity: 0.5;
-
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Mantém os elementos da navbar visíveis */
-.nav-container {
-  position: relative;
-  z-index: 1;
-  background: transparent;
-}
-
-/* ==========================================
-   VORTRYA — PADRONIZAÇÃO GLOBAL DA NAVBAR
-========================================== */
-
-/* Container */
-body.wiki-page .nav-container {
-  width: 100%;
-  min-width: 0;
-  padding-left: 9%;
-  padding-right: 2%;
-  gap: 12px;
-}
-
-/* Menu principal */
-body.wiki-page .nav-menu {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  flex-wrap: nowrap;
-  gap: 2px;
-
-  margin-left: auto;
-  min-width: 0;
-}
-
-/* Links e botões dropdown */
-body.wiki-page .nav-menu > li > a,
-body.wiki-page .nav-drop-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Cinzel", serif;
-  font-size: 0.72rem;
-  font-weight: 400;
-
-  padding: 10px 5px;
-  line-height: 1.2;
-
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* Evita deformações */
-body.wiki-page .nav-menu > li {
-  position: relative;
-  flex-shrink: 0;
-}
-
-/* Pesquisa */
-body.wiki-page .nav-container .nav-search {
-  flex: 0 0 180px;
-  width: 180px;
-  min-width: 180px;
-  height: 38px;
-}
-
-/* ==========================================
-   RESPONSIVIDADE
-========================================== */
-
-@media (max-width: 1250px) {
-  body.wiki-page .wiki-menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  body.wiki-page .nav-menu {
-    display: none;
-  }
-
-  body.wiki-page .nav-menu.is-open {
-    display: flex;
-  }
-
-  body.wiki-page .nav-menu > li > a,
-  body.wiki-page .nav-drop-toggle {
-    justify-content: flex-start;
-    font-size: 0.88rem;
-    padding: 13px 8px;
-  }
+@media (max-width: 560px) {
+ body.wiki-page .nav-container { padding: 10px 16px; gap: 8px; }
+ body.wiki-page .logo-title { font-size: 20px; }
+ body.wiki-page .logo-subtitle { display: none; }
+ body.wiki-page .nav-search { order: 3; flex: 0 0 100%; width: 100%; margin: 0; }
+ body.wiki-page .nav-search input { font-size: 16px; }
+ body.wiki-page .nav-menu { order: 4; }
 }

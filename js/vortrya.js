@@ -5,18 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Guia do Iniciante", "guia.html", "Primeiros passos"],
     ["Atributos", "atributos.html", "Superforça, dash, salto duplo"],
     ["Itens", "itens.html", "Armas e materiais"],
-    ["Crafting", "crafting.html", "Receitas e forja"],
+    ["Crafting", "itens.html#crafting", "Receitas e forja"],
     ["Inimigos", "inimigos.html", "Criaturas e NPCs"],
     ["Regiões", "regioes.html", "Biomas e exploração"],
     ["Facções", "faccoes.html", "Grupos do mundo"],
     ["Missões", "missoes.html", "Missões diárias e únicas"],
     ["FAQ", "faq.html", "Perguntas frequentes"],
     ["Bosses", "bosses.html", "Chefes e combate"],
-    ["História", "historia.html", "Lore"],
+    ["História", "index.html#historia", "Lore"],
     ["Classes", "classes.html", "Progressão"],
-    ["Equipamentos", "equipamentos.html", "Armaduras e armas"],
+    ["Equipamentos", "itens.html#equipamentos", "Armaduras e armas"],
     ["Mapa", "mapa.html", "Mundo de Vortrya"],
     ["Raids", "raids.html", "Desafios em grupo"],
+    ["Gameplay", "gameplay.html", "Modos de jogo e combate"],
+    ["Economia", "economia.html", "Recursos e moedas"],
+    ["Ranking", "ranking.html", "Hierarquia dos Caçadores"],
+    ["Eventos", "eventos.html", "Em desenvolvimento"],
+    ["Temporadas", "temporadas.html", "Em desenvolvimento"],
+    ["Atualizações", "atualizacoes.html", "Em desenvolvimento"],
+    ["Roadmap", "roadmap.html", "Em desenvolvimento"],
   ];
   // Barra de pesquisa. Em páginas antigas, injeta se houver navbar e não houver campo.
   const nav = document.querySelector(".nav-container");
@@ -79,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Realce do menu atual, apenas um mecanismo
   const current = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-menu a[href]").forEach((a) => {
-    if (a.getAttribute("href")?.split("/").pop() === current) {
+    if (a.getAttribute("href")?.split("#")[0].split("/").pop() === current && !a.getAttribute("href").includes("#")) {
       a.classList.add("active");
       a.closest("li")?.classList.add("active");
     }
@@ -132,6 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
       item.hidden = !show;
       item.style.display = show ? "" : "none";
     });
+    document.querySelectorAll(".faq-group").forEach(group => {
+      group.hidden = ![...group.querySelectorAll(".faq-item")].some(item => !item.hidden);
+    });
+    const empty = document.getElementById("faq-empty");
+    if (empty) empty.hidden = [...document.querySelectorAll(".faq-item")].some(item => !item.hidden);
   };
   document.querySelectorAll(".faq-category").forEach((button) =>
     button.addEventListener("click", () => {
@@ -143,6 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }),
   );
   faqSearch?.addEventListener("input", applyFAQ);
+  applyFAQ();
+  document.querySelectorAll(".faq-question").forEach(button => button.setAttribute("aria-expanded", "false"));
   document.querySelectorAll(".faq-question").forEach((button) =>
     button.addEventListener("click", () => {
       const item = button.closest(".faq-item");
