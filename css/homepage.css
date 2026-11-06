@@ -561,3 +561,56 @@ body.home .home-main > .mapa-container {
     animation: none;
   }
 }
+
+/* ===== REVISÃO FINAL — regras migradas de revisao.css ===== */
+body.home .home-main .home-map-shortcuts {
+  display: none;
+}
+
+.home-story .page-hero {
+  scroll-margin-top: 150px;
+}
+
+@media (max-width: 700px) {
+body.home .home-main .home-map-shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px 16px;
+    background: #0c1222;
+  }
+}
+
+@media (max-width: 700px) {
+body.home .home-map-shortcuts a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid #8f6b1f;
+    border-radius: 6px;
+    color: #f0c75e;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+body.home .home-story .page-content {
+    padding: 28px 16px;
+  }
+}
+
+@media (max-width: 700px) {
+body.home .home-story .page-content .container {
+    padding: 0;
+  }
+}
+
+body.home .home-story .page-hero-content p {
+  text-align: center;
+  color: #d8d5cc;
+}
+
+body.home .home-story .page-hero-content h1 {
+  color: #f0c75e;
+}

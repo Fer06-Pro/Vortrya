@@ -579,3 +579,44 @@
   line-height: 1.6;
 }
 
+/* ===== REVISÃO FINAL — regras migradas de revisao.css ===== */
+body.wiki-page .faq-hero {
+  background: rgba(7, 11, 24, 0.88);
+  padding: 34px 24px;
+  border-radius: 12px;
+}
+
+body.wiki-page .faq-hero h1 {
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1.2;
+}
+
+body.wiki-page .faq-hero p {
+  color: #ddd8cb;
+  font-size: 16px;
+}
+
+body.wiki-page .faq-question {
+  font-size: 16px;
+}
+
+body.wiki-page .faq-answer p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+body.wiki-page .faq-item[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+body.wiki-page .faq-question {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+body.wiki-page .faq-contact {
+    flex-wrap: wrap;
+  }
+}

@@ -328,3 +328,36 @@ main p {
 .logo {
   font-family: "Cinzel", serif;
 }
+
+/* ===== REVISÃO FINAL — regras migradas de revisao.css ===== */
+html {
+  scroll-padding-top: 145px;
+}
+
+@media (max-width: 700px) {
+body.wiki-page .faq-page {
+    padding: 30px 16px 50px;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:root {
+  --container: var(--container-width, 1400px);
+  --gradient-1: var(--gradient-gold);
+}

@@ -64,17 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const skills = [
     ['Superforça','Potência temporária sob pressão; a ativação e os limites ainda serão balanceados.'],
     ['Salto Duplo','Mobilidade vertical com um segundo impulso no ar.'],
-    ['Dash Aprimorado','Movimento veloz com maior precisão e possível custo de energia.'],
+    ['Dash Aprimorado','Movimento veloz com maior precisão e controle.'],
     ['Reflexos Aguçados','Melhora de resposta a ataques telegrafados.'],
     ['Resistência','Aprimora a capacidade de suportar longos confrontos.'],
-    ['Controle de Fôlego','Ajuda a administrar a energia em sequências de ações.']
+    ['Controle de Fôlego','Ajuda a administrar a energia em sequências de ações. Estado de foco constante']
   ];
   document.querySelectorAll('.skill-node').forEach(button => {
     button.addEventListener('click', () => {
       document.querySelectorAll('.skill-node').forEach(b => b.setAttribute('aria-pressed','false'));
       button.setAttribute('aria-pressed','true');
       const [name, desc] = skills[Number(button.dataset.skill)];
-      document.querySelector('#skill-detail').textContent = `${name}: ${desc} (Conceito provisório.)`;
+      document.querySelector('#skill-detail').textContent = `${name}: ${desc}`;
     });
   });
   const recipes = {

@@ -59,3 +59,20 @@
   top: 40.2%;
   left: 75.2%;
 }
+
+/* ===== REVISÃO FINAL — regras migradas de revisao.css ===== */
+body.home .home-main > .mapa-container {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1671 / 941;
+  background-size: 100% 100%;
+}
+
+body.home .mapa-container .map-button {
+  width: 15%;
+}
+
+body.home .mapa-container .map-button img {
+  width: 100%;
+  height: auto;
+}

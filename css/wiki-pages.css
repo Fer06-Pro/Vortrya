@@ -60,16 +60,6 @@ body.wiki-page:not(.home) {
   margin: 0 auto 16px;
 }
 
-.draft-tag {
-  display: inline-block;
-  border: 1px solid #876a34;
-  border-radius: 50px;
-  color: #dfc58f;
-  background: #d4af3710;
-  padding: 5px 15px;
-  font-size: 0.75rem;
-}
-
 .wiki-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -341,3 +331,65 @@ body.wiki-page .wiki-main h2 {
 
 }
 
+/* ===== REVISÃO FINAL — regras migradas de revisao.css ===== */
+body.wiki-page:not(.home) {
+  background-image:
+    linear-gradient(rgba(7, 11, 24, 0.82), rgba(7, 11, 24, 0.92)),
+    url("../imagens/mapa-vortrya.webp");
+}
+
+body.wiki-page main {
+  min-width: 0;
+}
+
+body.wiki-page .wiki-main {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+  padding: 40px 24px 70px;
+}
+
+body.wiki-page .wiki-main .wiki-card p,
+body.wiki-page .wiki-main .wiki-detail p {
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+body.wiki-page .wiki-heading p {
+  font-size: 16px;
+}
+
+body.wiki-page [hidden] {
+  display: none !important;
+}
+
+body.wiki-page .wiki-main .wiki-card h3 {
+  color: #f0c75e;
+}
+
+body.wiki-page .wiki-grid,
+body.wiki-page .catalog-page .wiki-grid {
+  min-width: 0;
+}
+
+body.wiki-page .development-page {
+  min-height: 50vh;
+}
+
+@media (max-width: 700px) {
+body.wiki-page .wiki-main {
+    padding: 28px 16px 50px;
+  }
+}
+
+@media (max-width: 700px) {
+body.wiki-page .wiki-grid,
+body.wiki-page .catalog-page .wiki-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.wiki-page main p {
+  text-align: left;
+  text-justify: auto;
+}
